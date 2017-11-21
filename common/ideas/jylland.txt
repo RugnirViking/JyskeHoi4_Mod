@@ -1,0 +1,327 @@
+ideas = {
+	
+
+	political_advisor = {
+
+		JFU_viggo_kampman = {
+
+			picture = generic_political_advisor_europe_2
+
+			allowed = {
+				original_tag = JFU
+			}
+			
+			traits = { smooth_talking_charmer }
+		}
+
+		JFU_ejnar_warum = {
+
+			picture = generic_political_advisor_europe_1
+				
+			allowed = {
+				original_tag = JFU
+			}
+			
+			traits = { captain_of_industry }
+		}
+
+		JFU_knud_kristensen = {
+
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = JFU
+			}
+			
+			traits = { backroom_backstabber }
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+
+
+	army_chief = {
+		
+
+		JFU_ebbe_gortz = {
+			
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = JFU
+			}
+			
+
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		JFU_wilhelm_prior = {
+			
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = JFU
+			}
+			
+
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	navy_chief = {
+		
+
+		JFU_carl_hammerich = {
+			
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = JFU
+			}
+			
+
+			
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		JFU_aage_vedel = {
+			
+			picture = generic_navy_europe_2
+			
+			allowed = {
+				original_tag = JFU
+			}
+			
+
+			
+			traits = { navy_anti_submarine_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	air_chief = {
+		
+
+		JFU_paul_sommer = {
+			
+			picture = generic_air_europe_2
+			
+			allowed = {
+				original_tag = JFU
+			}
+			
+
+			
+			traits = { air_close_air_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	
+		JFU_kaj_birksted = {
+			
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = JFU
+			}
+			
+
+			
+			traits = { air_air_combat_training_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+
+	high_command = {
+
+		JFU_hans_a_rolsted = {
+			
+			picture = generic_army_europe_4
+
+			allowed = {
+				original_tag = JFU
+			}
+			
+			traits = { army_artillery_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		JFU_christian_frederik_von_schalburg = {
+
+			picture = generic_army_europe_5
+			
+			allowed = {
+				original_tag = JFU
+			}
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		JFU_hjalmar_rechnitzer = {
+
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = JFU
+			}
+			
+			traits = { navy_fleet_logistics_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		JFU_poul_sommer = {
+
+			picture = generic_air_europe_1
+			
+			allowed = {
+				original_tag = JFU
+			}
+			
+			traits = { air_air_combat_training_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	theorist = {
+		JFU_william_wain_prior = {
+			
+			picture = generic_army_europe_3
+
+			allowed = {
+				original_tag = JFU
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+	
+		JFU_hans_lunding = {
+
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = JFU
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}
+
+	}
+
+	
+	aircraft_manufacturer = { 
+			
+		designer = yes
+		
+		htk_orlogsvaerftet = {
+			
+			picture = generic_air_manufacturer_3
+
+			
+			allowed = {
+				original_tag = JFU
+			}
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			# recon and fighter aircraft
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	naval_manufacturer = { 
+		
+		designer = yes
+		
+		burmeister_wain = {
+			
+			picture = generic_naval_manufacturer_1
+
+			
+			allowed = {
+				original_tag = JFU
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { naval_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+		disa = {
+			
+			picture = generic_infantry_equipment_manufacturer_2
+
+			
+			allowed = {
+				original_tag = JFU
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			# rifles
+			
+			traits = { infantry_equipment_manufacturer }
+
+		}
+	}
+}

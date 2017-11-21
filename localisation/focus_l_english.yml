@@ -1856,3 +1856,9 @@
  continuous_boost_freedom_desc:0 "By reorganizing our colonial bureaucracy and recruiting native administrators, we will, in time, be able to take charge of our own affairs."
  continuous_restrict_freedom:0 "Suppress Subjects"
  continuous_restrict_freedom_desc:0 "Our colonial subjects have gotten rather silly ideas about things like "self-determination" or "national independence". It is time to disabuse them of these notions."
+ jysk_focus:0 "Jyske National Focus"
+ JFU_create_a_reserve_system:0 "Create a Functioning Reserve System"
+ JFU_create_a_reserve_system_desc:0 "After the civil war three years ago, the glorious Jyske Union has been vulnerable to a breach of the ceasefire by the cowards across the sea. We need to create a system of reserves that allows us to effectively mobilise the population in case of attack."
+ JFU_induce_competition_in_industries:0 "Induce Competition in the Industries"
+ JFU_induce_competition_in_industries_desc:0 "Since the civil war we have settled into a rut in terms of production. The heavy industry feels that it can now rest on it's laurels. We need to incentivise them to produce more by creating a socialist competition for the good of the people."
+ 
