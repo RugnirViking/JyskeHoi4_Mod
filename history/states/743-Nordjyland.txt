@@ -1,0 +1,36 @@
+state= {
+	id=743
+	name="STATE_743"
+	manpower = 1839125
+	resources={
+		steel=10
+	}
+	
+	state_category = rural
+
+	history=
+	{
+		owner = JFU
+		victory_points = {
+			6235 5 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			air_base = 6
+			394 = {
+				naval_base = 4
+				coastal_bunker = 2
+			}
+			6235 = {
+				coastal_bunker = 2
+			}
+		}
+		add_core_of = DEN
+		add_core_of = JFU
+
+	}
+	provinces=
+	{
+316 394 3206 6235 	}
+}

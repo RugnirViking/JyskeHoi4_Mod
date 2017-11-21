@@ -1,0 +1,30 @@
+state= {
+	id=99
+	name="STATE_99"
+	manpower = 2872235
+	resources={
+		aluminium=15
+	}
+	
+	state_category = town
+
+	history=
+	{
+		owner = JFU
+		victory_points = {
+			6364 10 
+		}
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 4
+			6364 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = DEN
+		add_core_of = JFU
+	}
+	provinces=
+	{
+332 399 3277 3341 6364 11251 	}
+}
