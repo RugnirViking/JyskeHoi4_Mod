@@ -12,40 +12,30 @@ focus_tree = {
 	
 	default = no
 
-	focus = {
 		focus = { 
 		id = JFU_create_a_reserve_system 
 		icon = GFX_goal_generic_small_arms 
 		ai_will_do = { factor = 1 } 
  		x = 2 
  		y = 0 
- 		mutually_exclusive = { focus = } 
- 		prerequisite = { focus = } 
+ 		mutually_exclusive = { } 
+ 		prerequisite = { } 
  		cost = 10  
  		available_if_capitulated = yes  
  		completion_reward = { 
  			army_experience= 25 
- 		} 
- 		x = 2 
- 		y = 0 
- 		mutually_exclusive = { focus = } 
- 		prerequisite = { focus = } 
- 		cost = 10  
- 		 available_if_capitulated = yes  
- 		completion_reward = { 
- 		army_experience= 25 
  		} 
  		}#Focus for Induce Competition in the Industries 
 				focus = { 
 				id = JFU_induce_competition_in_industries 
 				icon = GFX_goal_generic_army_artillery2 
 				ai_will_do = { factor = 1} 
- 		x =2 
- 		y =1 
- 		mutually_exclusive = { focus = } 
- 		prerequisite = { focus = JFU_create_a_reserve_system } 
+ 		x =6 
+ 		y =0 
+ 		mutually_exclusive = { } 
+ 		prerequisite = { } 
  		cost = 10  
- 		 available_if_capitulated = yes  
+ 		available_if_capitulated = yes  
  		completion_reward = { 
  						random_owned_controlled_state = { 
  								limit = { 
@@ -97,13 +87,13 @@ focus_tree = {
  						} 
 					}
 				}
- 			focus = { 
-				id = JFU_found_antipartisan_brigades
+			focus = { 
+				id = JFU_christian_army_commisars
 				icon = GFX_goal_generic_political_pressure 
 				ai_will_do = { factor = 1 } 
- 				x = 1 
- 				y = 3 
- 				mutually_exclusive = { focus = } 
+ 				x = 2 
+ 				y = 1 
+ 				mutually_exclusive = { } 
  				prerequisite = { focus = JFU_create_a_reserve_system } 
  				cost = 10  
  				available_if_capitulated = yes  
@@ -111,5 +101,32 @@ focus_tree = {
  					army_experience= 25 
  				} 
 			}
+ 			focus = { 
+				id = JFU_found_antipartisan_brigades
+				icon = GFX_goal_generic_political_pressure 
+				ai_will_do = { factor = 1 } 
+ 				x = 1 
+ 				y = 2 
+ 				mutually_exclusive = { } 
+ 				prerequisite = { focus = JFU_christian_army_commisars } 
+ 				cost = 10  
+ 				available_if_capitulated = yes  
+ 				completion_reward = { 
+ 					army_experience= 25 
+ 				} 
+			}
+			focus = { 
+				id = JFU_instigate_july_7_plot
+				icon = GFX_goal_generic_political_pressure 
+				ai_will_do = { factor = 1 } 
+ 				x = 3 
+ 				y = 2 
+ 				mutually_exclusive = { } 
+ 				prerequisite = { focus = JFU_christian_army_commisars } 
+ 				cost = 10  
+ 				available_if_capitulated = yes  
+ 				completion_reward = { 
+ 					army_experience= 25 
+ 				} 
+			}
 	}
-}

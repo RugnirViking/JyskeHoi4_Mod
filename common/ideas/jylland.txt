@@ -196,7 +196,21 @@ ideas = {
 				original_tag = JFU
 			}
 			
-			traits = { navy_fleet_logistics_1 }
+			traits = { seawolf }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		JFU_peter_mikkelsen = {
+			picture = generic_navy_europe_2
+			
+			allowed = {
+				original_tag = JFU
+			}
+			
+			traits = { navy_chief_commerce_raiding_3 }
 			
 			ai_will_do = {
 				factor = 1
@@ -303,7 +317,7 @@ ideas = {
             allowed = {
 				original_tag = JFU
 			}
-			
+			picture = generic_air_manufacturer_1
 			research_bonus = {
 				air_equipment = -0.15
 			}
@@ -415,7 +429,7 @@ ideas = {
 		}
         JFU_esbjerg_manufactory = {
 			
-			picture = generic_artillery_equipment_manufacturer_1
+			picture = generic_artillery_manufacturer_1
 
 			
 			allowed = {
@@ -437,7 +451,7 @@ ideas = {
             allowed = {
 				original_TAG = JFU
 			}
-			
+			picture = generic_tank_manufacturer_1
 			traits = { fast_tank_manufacturer medium_tank_manufacturer }
 			
 			modifier = {
@@ -449,7 +463,7 @@ ideas = {
 			}
 			
 
-			
+			picture = generic_tank_manufacturer_2
 			research_bonus = {
 				armor = 0.10
 			}
@@ -463,7 +477,7 @@ ideas = {
             allowed = {
 				original_TAG = JFU
 			}
-			
+			picture = generic_tank_manufacturer_3
 
 			
 			research_bonus = {
@@ -479,7 +493,7 @@ ideas = {
     industrial_concern = {
 				
 		JFU_holstebro_collective_factory = {
-			
+			picture = generic_artillery_manufacturer_2
 			allowed = {
 				original_TAG = JFU
 			}
@@ -497,7 +511,7 @@ ideas = {
 		}
 		
 		JFU_erwin_and_sorensen = {
-			
+			picture = generic_infantry_equipment_manufacturer_2
 			allowed = {
 				original_TAG = JFU
 			}
@@ -515,7 +529,7 @@ ideas = {
 		}
 
 		JFU_aalborg_engine_plant = {
-			
+			picture = generic_motorized_equipment_manufacturer_2
 			allowed = {
 				original_TAG = JFU
 			}
