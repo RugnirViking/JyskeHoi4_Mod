@@ -117,8 +117,23 @@ focus_tree = {
 			}
 			focus = { 
 				id = JFU_instigate_july_7_plot
-				icon = GFX_goal_generic_political_pressure 
-				ai_will_do = { factor = 1 } 
+				icon = GFX_goal_generic_more_territorial_claimss 
+				ai_will_do = {
+					factor = 10	
+					modifier = {
+						factor = 0
+						date < 1939.1.1
+					}
+				}	
+				bypass = {
+			DEN = { is_in_faction_with = JFU }
+		}
+		cancel = {
+			OR = {
+				NOT = { country_exists = DEN }
+				has_war_with = DEN
+			}
+		}
  				x = 3 
  				y = 2 
  				mutually_exclusive = { } 
@@ -126,7 +141,22 @@ focus_tree = {
  				cost = 10  
  				available_if_capitulated = yes  
  				completion_reward = { 
+					DEN = {
+						add_opinion_modifier = { target = JFU modifier = DEN_july_7_incident }
+					}
  					army_experience= 25 
+					add_tech_bonus = {
+						name = tp_bonus
+						bonus = 0.5
+						ahead_reduction = 1
+						uses = 1
+						technology = transport
+						technology = landing_craft
+						technology = tank_landing_craft
+					}
+					add_opinion_modifier = { target = DEN modifier = JFU_july_7_incident  }
+					
  				} 
+				
 			}
 	}

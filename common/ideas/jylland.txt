@@ -196,7 +196,7 @@ ideas = {
 				original_tag = JFU
 			}
 			
-			traits = { seawolf }
+			traits = { navy_submarine_3 }
 			
 			ai_will_do = {
 				factor = 1
