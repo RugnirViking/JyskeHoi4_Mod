@@ -2511,3 +2511,15 @@
  JFU_aalborg_engine_plant:"Aalborg Engine Plant"
 
  JFU_factory_no_12:"Factory No.12"
+
+ # jfu focus ideas
+ will_of_the_poeple_focus:0 "Echoes of the revolution";
+ prioritise_strong_leadership_focus:0 "Prioritising strong leadership";
+ power_and_politics_focus:0 "Power and Politics"
+ instate_a_monarchy_focus:0 "Instate a Monarchy"
+ remember_the_revolution_focus:0 "Remember the Revolution"
+ remember_founding_principles_focus:0 "Remember Founding Principles"
+ north_sea_guardians_focus:0 "North Sea Guardians"
+ create_a_reserve_system_focus:0 "Create a Reserve System"
+ christian_army_commisars_focus:0 "Christian Army Commisars"
+ found_antipartisan_brigades_focus:0 "Found Antipartisan Brigades"

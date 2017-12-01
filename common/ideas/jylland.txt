@@ -540,4 +540,158 @@ ideas = {
 			}
 		}
 	}	
+	hidden_ideas = {
+		will_of_the_poeple_focus = { # echoes of the revolution
+		
+			allowed = {
+				always = no
+			}
+		
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+
+			modifier = {
+				communism_drift = 0.05
+			}
+		}
+
+		prioritise_strong_leadership_focus = {
+		
+			allowed = {
+				always = no
+			}
+		
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+
+			modifier = {
+				communism_drift = -0.15
+				justify_war_goal_time = -0.25
+			}
+		}
+
+		power_and_politics_focus = {
+		
+			allowed = {
+				always = no
+			}
+		
+			removal_cost = -1
+
+			picture = generic_fascism_drift_bonus
+
+			modifier = {
+				fascism_drift = 0.15
+			}
+		}
+
+		instate_a_monarchy_focus = {
+		
+			allowed = {
+				always = no
+			}
+		
+			removal_cost = -1
+
+			picture = idea_ast_abandon_the_westminster_system
+
+			modifier = {
+				communism_drift = -0.35
+				fascism_drift = -0.35
+				democratic_drift = -0.35
+				neutrality_drift = 0.35
+			}
+		}
+
+		remember_the_revolution_focus = { 
+		
+			allowed = {
+				always = no
+			}
+		
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+
+			modifier = {
+				communism_drift = 0.05
+				enemy_partisan_effect = -0.1
+			}
+		}
+		remember_founding_principles_focus = { 
+		
+			allowed = {
+				always = no
+			}
+		
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+
+			modifier = {
+				democratic_drift  = 0.15
+				enemy_partisan_effect = -0.1
+			}
+		}
+		north_sea_guardians_focus = {
+			
+			allowed = {
+				always = no
+			}
+		
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+
+			modifier = {
+				drift_defence_factor = 0.15
+			}
+		}
+		create_a_reserve_system_focus = {
+			
+			allowed = {
+				always = no
+			}
+		
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+
+			modifier = {
+				conscription = 0.015
+				training_time_army_factor = -0.1
+			}
+		}
+		christian_army_commisars_focus = {
+			
+			allowed = {
+				always = no
+			}
+		
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+
+			modifier = {
+				army_morale_factor = 0.1
+			}
+		}
+		found_antipartisan_brigades_focus = {
+			
+			allowed = {
+				always = no
+			}
+		
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+
+			modifier = {
+				unity_factor = 0.10
+				drift_defence_factor = 0.15
+			}
+		}
+	}
 }
