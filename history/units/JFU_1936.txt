@@ -76,13 +76,20 @@ units = {
 	}
 	division = {
 		name = "Gardehussar Regiment"
-		location = 6364  # Aarhus
+		location = 6364  # Aalborg
 		division_template = "Kavaleri Brigade"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.3
 
 	}
+	division = {
+		name = "Jydske Dragonregiment"
+		location = 6364  # Aalborg
+		division_template = "Kavaleri Brigade"
+		start_experience_factor = 1.2
+		start_equipment_factor = 1.0
 
+	}
 	##### NAVAL UNITS #####
 	navy = {				
 		name = "Den Jyske Flåde"			

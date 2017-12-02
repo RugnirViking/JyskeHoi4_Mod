@@ -1,0 +1,17 @@
+units = {
+	##### Special navy spawned from JFU tree #####
+	navy = {				
+		name = "Den Folkets Revolutionerende Flåde"			
+		base = 394  
+		location = 394  # Aalborg
+		ship = { name = "HDMS Jomfru Anne" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = JFU } } }
+		ship = { name = "HDMS Jomfru Maria" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = JFU } } }
+        ship = { name = "HDMS Diana" definition = light_cruiser_1 equipment = { light_cruiser_1 = { amount = 1 owner = JFU } } }
+        ship = { name = "HDMS Freja" definition = light_cruiser_1 equipment = { light_cruiser_1 = { amount = 1 owner = JFU } } }
+        ship = { name = "HDMS Svanen" definition = light_cruiser_1 equipment = { light_cruiser_1 = { amount = 1 owner = JFU } } }
+        ship = { name = "HDMS Hvidbjørnen" definition = light_cruiser_1 equipment = { light_cruiser_1 = { amount = 1 owner = JFU } } }
+        ship = { name = "HDMS Ertholm" definition = destroyer equipment = { destroyer = { amount = 1 owner = JFU } } }
+        ship = { name = "HDMS Alholm" definition = destroyer equipment = { destroyer = { amount = 1 owner = JFU } } }
+        ship = { name = "HDMS Bornholm" definition = destroyer equipment = { destroyer = { amount = 1 owner = JFU } } }
+	}
+}

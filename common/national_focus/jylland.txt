@@ -391,7 +391,37 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				745 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 13209
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 13208
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 11251
+							instant_build = yes
+						}
+					}
+				}
+				99 = {
+					add_building_construction = {
+							type = bunker
+							level = 2
+							province = 3277
+							instant_build = yes
+						}
+				}
  			} 
 		}
 		focus = {
@@ -419,8 +449,34 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				745 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = coastal_bunker
+							level = 2
+							province = 13210
+							instant_build = yes
+						}
+				}
+				99 = {
+					add_building_construction = {
+							type = coastal_bunker
+							level = 2
+							province = 6364
+							instant_build = yes
+						}
+				}
+				744 = {
+					add_building_construction = {
+							type = coastal_bunker
+							level = 2
+							province = 394
+							instant_build = yes
+						}
+				}
  			} 
+		}
 		}
 		focus = {
 			id = JFU_construct_city_trenchlines
@@ -433,8 +489,34 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				745 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 13210
+							instant_build = yes
+						}
+				}
+				99 = {
+					add_building_construction = {
+							type = bunker
+							level = 2
+							province = 6364
+							instant_build = yes
+						}
+				}
+				744 = {
+					add_building_construction = {
+							type = bunker
+							level = 2
+							province = 6235
+							instant_build = yes
+						}
+				}
  			} 
+		}
 		}
 		focus = {
 			id = JFU_redoubt_nordjylland
@@ -447,7 +529,33 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+				744 = {
+					add_building_construction = {
+							type = bunker
+							level = 2
+							province = 6235
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = bunker
+							level = 2
+							province = 3206
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = bunker
+							level = 2
+							province = 13214
+							instant_build = yes
+						}
+					add_building_construction = {
+							type = industrial_complex 
+							level = 2
+							instant_build = yes
+						}
+					add_extra_state_shared_building_slots = 2
+
+				}
  			} 
 		}
 		# fascist & neutral tree
@@ -583,7 +691,7 @@ focus_tree = {
  								} 
  								set_state_flag = JFU_Focus_greatleap2 
  						} 
- 											random_owned_controlled_state = { 
+ 						random_owned_controlled_state = { 
  								limit = { 
  									free_building_slots = { 
  											building = industrial_complex 
@@ -599,23 +707,17 @@ focus_tree = {
  								} 
  								set_state_flag = JFU_Focus_greatleap2
  						} 
- 						random_owned_controlled_state = { 
- 								limit = { 
- 									free_building_slots = { 
- 											building = industrial_complex 
- 											size > 0 
- 											include_locked = yes 
- 									} 
- 								} 
- 								add_extra_state_shared_building_slots = 1 
- 								add_building_construction = { 
- 									type = industrial_complex 
- 									level = 1 
- 									instant_build = yes 
- 								} 
- 								set_state_flag = JFU_Focus_greatleap2 
- 						} 
+					add_resource = {
+						type = aluminium
+						amount = 4
+						state = 745
 					}
+					add_resource = {
+						type = chromium
+						amount = 4
+						state = 745
+					}
+				}
  			} 
 		focus = {
 			id = JFU_instate_jyske_air_wing
@@ -628,7 +730,36 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				random_owned_controlled_state = { 
+ 								limit = { 
+ 									free_building_slots = { 
+ 											building = air_base 
+ 											size > 0 
+ 											include_locked = yes 
+ 									} 
+ 								} 
+ 								add_building_construction = { 
+ 									type = air_base 
+ 									level = 2 
+ 									instant_build = yes 
+ 								} 
+ 								set_state_flag = JFU_Focus_air1
+ 						} 
+ 						random_owned_controlled_state = { 
+ 								limit = { 
+ 									free_building_slots = { 
+ 											building = air_base 
+ 											size > 0 
+ 											include_locked = yes 
+ 									} 
+ 								} 
+ 								add_building_construction = { 
+ 									type = air_base 
+ 									level = 2 
+ 									instant_build = yes 
+ 								} 
+ 								set_state_flag = JFU_Focus_air1
+ 						}
  			} 
 		}
 		focus = {
@@ -642,7 +773,38 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				random_owned_controlled_state = { 
+ 								limit = { 
+ 									free_building_slots = { 
+ 											building = dockyard 
+ 											size > 0 
+ 											include_locked = yes 
+ 									} 
+ 								} 
+ 								add_extra_state_shared_building_slots = 1 
+ 								add_building_construction = { 
+ 									type = dockyard 
+ 									level = 1 
+ 									instant_build = yes 
+ 								} 
+ 								set_state_flag = JFU_Focus_navy1
+ 						} 
+ 						random_owned_controlled_state = { 
+ 								limit = { 
+ 									free_building_slots = { 
+ 											building = dockyard 
+ 											size > 0 
+ 											include_locked = yes 
+ 									} 
+ 								} 
+ 								add_extra_state_shared_building_slots = 1 
+ 								add_building_construction = { 
+ 									type = dockyard 
+ 									level = 1 
+ 									instant_build = yes 
+ 								} 
+ 								set_state_flag = JFU_Focus_navy1
+ 						}
  			} 
 		}
 		focus = {
@@ -658,7 +820,7 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				add_research_slot = 1
  			} 
 		}
 		focus = {
@@ -672,7 +834,33 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				744 = { 
+ 								add_extra_state_shared_building_slots = 2
+ 								add_building_construction = { 
+ 									type = synthetic_refinery 
+ 									level = 2 
+ 									instant_build = yes 
+ 								} 
+								 add_building_construction = { 
+ 									type = anti_air_building 
+ 									level = 2 
+ 									instant_build = yes 
+ 								} 
+ 						}
+				99 = {
+					add_building_construction = { 
+ 									type = anti_air_building 
+ 									level = 2 
+ 									instant_build = yes 
+ 								} 
+				}
+				745 = {
+					add_building_construction = { 
+ 									type = anti_air_building 
+ 									level = 2 
+ 									instant_build = yes 
+ 								} 
+				}
  			} 
 		}
 		focus = {
@@ -686,8 +874,9 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				load_oob = "JFU_Navy_Jylland"
  			} 
+			custom_effect_tooltip = JFU_commandeer_merchant_navy_tooltip
 		}
 		focus = {
 			id = JFU_found_piloting_schools
@@ -700,7 +889,22 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				air_experience = 100
+				random_owned_controlled_state = { 
+ 								limit = { 
+ 									free_building_slots = { 
+ 											building = air_base 
+ 											size > 0 
+ 											include_locked = yes 
+ 									} 
+ 								} 
+ 								add_building_construction = { 
+ 									type = air_base 
+ 									level = 2 
+ 									instant_build = yes 
+ 								} 
+ 								set_state_flag = JFU_Focus_air1
+ 						}
  			} 
 		}
 		focus = {
@@ -716,7 +920,37 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				745 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 13209
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 13208
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 11251
+							instant_build = yes
+						}
+					}
+				}
+				99 = {
+					add_building_construction = {
+							type = bunker
+							level = 2
+							province = 3277
+							instant_build = yes
+						}
+				}
  			} 
 		}
 			focus = { 

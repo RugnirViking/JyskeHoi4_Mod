@@ -1950,3 +1950,4 @@
  JFU_found_piloting_schools_desc:0 ""
  JFU_create_bunker_network:0 "Create Bunker Network"
  JFU_create_bunker_network_desc:0 ""
+ JFU_commandeer_merchant_navy_tooltip:0 "Gain 8 naval units from converted ocean liners and cargo vessels."

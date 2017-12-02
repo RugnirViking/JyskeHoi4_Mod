@@ -1,0 +1,32 @@
+state= {
+	id=745
+	name="STATE_745"
+	manpower = 1872235
+	resources={
+		tungsten=3
+        steel=5
+	}
+	
+	state_category = town
+
+	history=
+	{
+		owner = JFU
+		victory_points = {
+			13210 2 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 1
+			13210 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = DEN
+		add_core_of = JFU
+	}
+	provinces=
+	{
+332 11251 13208 13209 13205 13210	}
+}
