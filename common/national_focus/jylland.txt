@@ -109,7 +109,7 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				add_ideas = raiding_parties_focus
  			} 
 		}
 		# international communism spread tree
@@ -875,8 +875,8 @@ focus_tree = {
  			available_if_capitulated = yes  
  			completion_reward = { 
  				load_oob = "JFU_Navy_Jylland"
+				custom_effect_tooltip = JFU_commandeer_merchant_navy_tooltip
  			} 
-			custom_effect_tooltip = JFU_commandeer_merchant_navy_tooltip
 		}
 		focus = {
 			id = JFU_found_piloting_schools
