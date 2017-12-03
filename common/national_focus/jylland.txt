@@ -467,7 +467,7 @@ focus_tree = {
 							instant_build = yes
 						}
 				}
-				744 = {
+				743 = {
 					add_building_construction = {
 							type = coastal_bunker
 							level = 2
@@ -507,7 +507,7 @@ focus_tree = {
 							instant_build = yes
 						}
 				}
-				744 = {
+				743 = {
 					add_building_construction = {
 							type = bunker
 							level = 2
@@ -529,7 +529,7 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
-				744 = {
+				743 = {
 					add_building_construction = {
 							type = bunker
 							level = 2
@@ -834,7 +834,7 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				744 = { 
+ 				743 = { 
  								add_extra_state_shared_building_slots = 2
  								add_building_construction = { 
  									type = synthetic_refinery 
