@@ -535,3 +535,19 @@ JFU = {
 	color = rgb { 87  116  223 }
 	color_ui = rgb { 67  96  203 }
 }
+ISN = {
+	color = rgb { 93  188  210 }
+	color_ui = rgb { 73  168  190 }
+}
+ISG = {
+	color = rgb { 154  176  123 }
+	color_ui = rgb { 134  156  103 }
+}
+ISI = {
+	color = rgb { 204  220  218 }
+	color_ui = rgb { 184  200  198 }
+}
+ISF = {
+	color = rgb { 40  82  130 }
+	color_ui = rgb { 20  62  110 }
+}

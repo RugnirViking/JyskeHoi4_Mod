@@ -391,3 +391,40 @@ country_event = {
 		add_national_unity = 0.05
 	}
 }
+# create ISFU Northern Union or ISFU Iceland, ISFU Greenland and ISFU Føroyar 
+country_event = {
+	id = jfu.11
+	title = jfu.11.t
+	desc = jfu.11.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+	trigger = {
+		AND = {
+			100 = { is_owned_by = JFU } # Iceland
+			101 = { is_owned_by = JFU } # Greenland
+			337 = { is_owned_by = JFU } # Faroe Islands
+		}
+	}
+	
+	option = { # create one big state
+		name = jfu.11.a
+		ISN = {
+			transfer_state = 100
+			transfer_state = 101
+			transfer_state = 337
+		}
+	}
+	option = { # create three separate states
+		name = jfu.11.b
+		ISI = {
+			transfer_state = 100
+		}
+		ISF = {
+			transfer_state = 337
+		}
+		ISG = {
+			transfer_state = 101
+		}
+	}
+}

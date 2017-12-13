@@ -31,7 +31,7 @@ class wordObj:
     def addData(self,name,value):
         self.data.append(dataObj(name,value))
 class focusObj:
-    def __init__(self, focus_id, focus_localisation_name, icon_id, mutually_exclusive_focus_id, prerequisite_focus_id, reward_text, focus_x, focus_y, cost, ai_will_do_factor):
+    def __init__(self, focus_id, focus_localisation_name, icon_id, mutually_exclusive_focus_id, prerequisite_focus_id, reward_text, focus_x, focus_y, cost, ai_will_do_factor, focus_localisation_desc):
         self.focus_id=focus_id
         self.focus_localisation_name=focus_localisation_name
         self.icon_id = icon_id
@@ -42,6 +42,7 @@ class focusObj:
         self.focus_y = focus_y
         self.cost = cost
         self.ai_will_do_factor = ai_will_do_factor
+        self.focus_localisation_desc = focus_localisation_desc
 def getNumeric(prompt):
     while True:
         try:
@@ -51,18 +52,18 @@ def getNumeric(prompt):
             print("Numbers only please!")
     return res
 def getVars():
-    focus_id = raw_input("Enter focus ID")
-    focus_localisation_name = raw_input("Enter localisation name")
-    icon = raw_input("Enter icon ID")
-    mutually_exclusive_focus_id = raw_input("Enter mutually exclusive focus ID")
-    prerequisite_focus_id = raw_input("Enter prerequisite focus ID")
-    reward_text = raw_input("Enter reward text")
-
-    focus_x = getNumeric("Enter focus x position")
-    focus_y = getNumeric("Enter focus y position")
-    cost = getNumeric("Enter focus cost (10 is default)")
-    ai_will_do_factor = getNumeric("AI will do factor (Best leave at 1)")
-    return focusObj(focus_id,focus_localisation_name,icon,mutually_exclusive_focus_id,prerequisite_focus_id,reward_text,focus_x,focus_y,cost,ai_will_do_factor)
+    focus_id = raw_input("Enter focus ID: ")
+    focus_localisation_name = raw_input("Enter localisation name: ")
+    focus_localisation_desc = raw_input("Enter localisation description: ")
+    icon = raw_input("Enter icon ID: ")
+    mutually_exclusive_focus_id = raw_input("Enter mutually exclusive focus ID: ")
+    prerequisite_focus_id = raw_input("Enter prerequisite focus ID: ")
+    reward_text = raw_input("Enter reward text: ")
+    focus_x = getNumeric("Enter focus x position: ")
+    focus_y = getNumeric("Enter focus y position: ")
+    cost = getNumeric("Enter focus cost (10 is default): ")
+    ai_will_do_factor = getNumeric("AI will do factor (Best leave at 1): ")
+    return focusObj(focus_id,focus_localisation_name,icon,mutually_exclusive_focus_id,prerequisite_focus_id,reward_text,focus_x,focus_y,cost,ai_will_do_factor,focus_localisation_desc)
 def buildFocus(vars):
     focusString = ""
     focusString+="focus = {\n"
@@ -92,18 +93,20 @@ def buildFocus(vars):
 def writeFile():
     global insertPos
     vars = getVars()
-    with open("jylland.txt","w") as f:
+    with open("common/national_focus/jylland.txt","w") as f:
         num = 0
         for line in lines:
             #print(line)#
             num+=1
+            
             if not num==insertPos-1:
                 f.write(line)
             else:
                 focusString = buildFocus(vars)
-                f.write("\t"+focusString)
-    writeToLocalisation(vars.focus_id, vars.focus_localisation_name)
-def writeToLocalisation(focus_id,focus_localisation_name):
+                f.write("\t}\n\t"+focusString)
+    print("EGGS2")
+    writeToLocalisation(vars.focus_id, vars.focus_localisation_name,vars.focus_localisation_desc)
+def writeToLocalisation(focus_id,focus_localisation_name,focus_localisation_desc):
     with open("localisation/focus_l_english.yml","r") as f:
         for line in f:
             locFile.append(line)
@@ -111,7 +114,9 @@ def writeToLocalisation(focus_id,focus_localisation_name):
         for line in locFile:
             f.write(line)
         f.write("\n")
-        f.write(" "+focus_id+":0 \""+focus_localisation_name+"\" \n")
+        f.write(" "+focus_id+":0 \""+focus_localisation_name+"\"")
+        f.write("\n")
+        f.write(" "+focus_id+"_desc:0 \""+focus_localisation_desc+"\"")
         
 def appendWord(word):
     if len(word)>0:
