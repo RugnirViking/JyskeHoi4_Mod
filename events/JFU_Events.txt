@@ -1,0 +1,393 @@
+add_namespace = jfu
+
+country_event  = {
+	id = jfu.1
+	title = jfu.1.t
+	desc = jfu.1.d
+	picture = GFX_news_event_journalists_speech
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = jfu.1.a
+		trigger = {
+			tag = JFU
+		}
+	}
+
+	option = {
+		name = jfu.1.b
+		trigger = {
+			OR = {
+				tag = BEL
+				tag = HOL
+				tag = LUX
+			}
+		}
+	}
+
+	option = {
+		name = jfu.1.c
+		trigger = {
+			is_in_faction_with = JFU
+			NOT = {
+				tag = JFU
+			}
+		}
+	}
+
+	option = {
+		name = jfu.1.e
+		trigger = {
+			is_in_faction = yes
+			NOT = {
+				is_in_faction_with = JFU
+			}
+			NOT = {
+				has_government = communism
+			}
+			NOT = {
+				OR = {
+					tag = BEL
+					tag = HOL
+					tag = LUX
+				}
+			}
+		}
+	}
+
+	option = {
+		name = jfu.1.f
+		trigger = {
+			has_government = communism
+			NOT = {
+				OR = {
+					tag = JFU
+					tag = BEL
+					tag = HOL
+					tag = LUX
+					is_in_faction_with = JFU
+					is_in_faction = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = jfu.1.g
+		trigger = {
+			NOT = {
+				OR = {
+					tag = JFU
+					tag = BEL
+					tag = HOL
+					tag = LUX
+					is_in_faction_with = JFU
+					is_in_faction = yes
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = jfu.2
+	title = jfu.2.t
+	desc = jfu.2.d
+	picture = GFX_report_event_polish_tanks_01
+
+	is_triggered_only = yes
+
+	option = { #Enter alliance
+		name = jfu.2.a
+		ai_chance = {
+			factor = 90
+		}
+		JFU = {
+			add_to_faction = ROOT
+			ROOT = {
+				add_ai_strategy = {
+					type = alliance
+					id = "JFU"
+					value = 200
+				}
+			}
+			country_event = { id = jfu.3 days = 1 }
+		}
+	}
+
+	option = {
+		name = jfu.2.b
+		ai_chance = {
+			factor = 10
+		}
+		effect_tooltip = {
+			JFU = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = ROOT
+				}
+			}
+		}
+		JFU = {
+			country_event = { id = jfu.4 days = 1 }
+		}
+	}
+}
+# The country decided to join jfu alliance
+country_event = {
+	id = jfu.3
+	title = jfu.3.t
+	desc = jfu.3.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+
+	option = {
+		name = jfu.3.a
+	}
+}
+# The country did not join jfu alliance - gain war goal
+country_event = {
+	id = jfu.4
+	title = jfu.4.t
+	desc = jfu.4.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+
+	option = {
+		name = jfu.4.a
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = FROM
+		}
+	}
+}
+# Creates international worker's union
+news_event = {
+	id = jfu.5
+	title = jfu.5.t
+	desc = jfu.5.d
+	picture = GFX_news_event_polish_army
+
+	major = yes
+
+	is_triggered_only = yes
+
+	fire_for_sender = no
+
+	option = {
+		name = jfu.5.a
+		trigger = {
+			NOT = {
+				OR = {
+					tag = ENG
+					tag = USA
+					tag = GER
+					tag = SOV
+				}
+			}
+		}
+	}
+
+	option = {
+		name = jfu.5.b
+		trigger = {
+			tag = SOV
+		}
+	}
+
+	option = {
+		name = jfu.5.c
+		trigger = {
+			tag = GER
+		}
+	}
+	option = {
+		name = jfu.5.e
+		trigger = {
+			tag = ENG
+		}
+	}
+	option = {
+		name = jfu.5.f
+		trigger = {
+			tag = USA
+		}
+	}
+}
+country_event  = {
+	id = jfu.6
+	title = jfu.6.t
+	desc = jfu.6.d
+	picture = GFX_news_event_journalists_speech
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = jfu.6.a
+		trigger = {
+			tag = JFU
+		}
+	}
+	option = {
+		name = jfu.6.b
+		trigger = {
+			OR = {
+				tag = PRU
+				tag = ECU
+				tag = COL
+				tag = BRA
+			}
+		}
+	}
+
+	option = {
+		name = jfu.6.c
+		trigger = {
+			is_in_faction_with = JFU
+			NOT = {
+				tag = JFU
+			}
+		}
+	}
+
+	option = {
+		name = jfu.6.e
+		trigger = {
+			is_in_faction = yes
+			NOT = {
+				is_in_faction_with = JFU
+			}
+			NOT = {
+				has_government = communism
+			}
+			NOT = {
+				OR = {
+					tag = PRU
+					tag = ECU
+					tag = COL
+					tag = BRA
+					tag = USA
+				}
+			}
+		}
+	}
+
+	option = {
+		name = jfu.6.f
+		trigger = {
+			has_government = communism
+			NOT = {
+				OR = {
+					tag = JFU
+					tag = PRU
+					tag = ECU
+					tag = COL
+					tag = BRA
+					tag = USA
+					is_in_faction_with = JFU
+					is_in_faction = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = jfu.6.g
+		trigger = {
+			NOT = {
+				OR = {
+					tag = JFU
+					tag = PRU
+					tag = ECU
+					tag = COL
+					tag = BRA
+					tag = USA
+					is_in_faction_with = JFU
+					is_in_faction = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = jfu.6.h
+		trigger = {
+			tag = USA
+		}
+	}
+}
+# zodiac expedition in brazil
+country_event = {
+	id = jfu.7
+	title = jfu.7.t
+	desc = jfu.7.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+
+	option = {
+		name = jfu.7.a
+		load_oob = "BRA_Zodiac"
+	}
+	option = {
+		name = jfu.7.b
+		add_national_unity = 0.05
+	}
+}
+# zodiac expedition in columbia
+country_event = {
+	id = jfu.8
+	title = jfu.8.t
+	desc = jfu.8.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+
+	option = {
+		name = jfu.8.a
+		load_oob = "COL_Zodiac"
+	}
+	option = {
+		name = jfu.8.b
+		add_national_unity = 0.05
+	}
+}
+# zodiac expedition in ecuador
+country_event = {
+	id = jfu.9
+	title = jfu.9.t
+	desc = jfu.9.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+
+	option = {
+		name = jfu.9.a
+		load_oob = "ECU_Zodiac"
+	}
+	option = {
+		name = jfu.9.b
+		add_national_unity = 0.05
+	}
+}
+# zodiac expedition in peru
+country_event = {
+	id = jfu.10
+	title = jfu.10.t
+	desc = jfu.10.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+
+	option = {
+		name = jfu.10.a
+		load_oob = "PRU_Zodiac"
+	}
+	option = {
+		name = jfu.10.b
+		add_national_unity = 0.05
+	}
+}

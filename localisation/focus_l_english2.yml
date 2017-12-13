@@ -1952,3 +1952,4 @@
  JFU_create_bunker_network_desc:0 ""
  JFU_commandeer_merchant_navy_tooltip:0 "Gain 8 naval units from converted ocean liners and cargo vessels."
  JFU_zodiac_expedition_tooltip:0 "Send a grand millitary expedition by submarine to south america in total secrecy"
+ focus_id_1:0 "Focus ID 1" 

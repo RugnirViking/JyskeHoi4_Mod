@@ -1,0 +1,27 @@
+ideas = {
+    hidden_ideas = {
+    
+    }
+    country = {
+        jysk_spreading_socialism = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+
+			
+			modifier = {
+				communism_drift = 0.12
+				communism_acceptance = 85
+			}
+		}
+    }
+}

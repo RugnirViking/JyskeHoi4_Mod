@@ -1,0 +1,1131 @@
+#focus_tree = {
+#	id = jysk_focus
+#	
+#	country = {
+#		factor = 0
+#		
+#		modifier = {
+#			add = 10
+#			tag = JFU
+#		}
+#	}
+#	
+#	default = no
+#		# Political (fascist/communist/democratic/neutral)
+#		focus = {
+#			id = JFU_reorganise_revolutionary_government
+#			icon = GFX_focus_generic_self_management
+#			ai_will_do = { factor = 1 } 
+# 			x = 12 
+# 			y = 0 
+# 			mutually_exclusive = { } 
+# 			prerequisite = { } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				add_political_power = 150 
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_turn_to_will_of_people
+#			icon = GFX_goal_generic_propaganda
+#			ai_will_do = { factor = 1 } 
+# 			x = 14 
+# 			y = 1 
+# 			mutually_exclusive = { focus = JFU_prioritise_strong_leadership } 
+# 			prerequisite = { focus = JFU_reorganise_revolutionary_government } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				add_ideas = will_of_the_poeple_focus
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_prioritise_strong_leadership
+#			icon = GFX_goal_generic_political_pressure
+#			ai_will_do = { factor = 1 } 
+# 			x = 10 
+# 			y = 1 
+# 			mutually_exclusive = { focus = JFU_turn_to_will_of_people } 
+# 			prerequisite = { focus = JFU_reorganise_revolutionary_government } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				add_ideas = prioritise_strong_leadership_focus
+# 			} 
+#		}
+#		# democracy & communist tree
+#		focus = {
+#			id = JFU_remember_the_revolution
+#			icon = GFX_focus_generic_soviet_politics
+#			ai_will_do = { factor = 1 } 
+# 			x = 15 
+# 			y = 2 
+# 			mutually_exclusive = { focus = JFU_remember_founding_principles } 
+# 			prerequisite = { focus = JFU_turn_to_will_of_people } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				add_ideas = remember_the_revolution_focus
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_remember_founding_principles
+#			icon = GFX_goal_generic_national_unity
+#			ai_will_do = { factor = 1 } 
+# 			x = 13 
+# 			y = 2 
+# 			mutually_exclusive = { focus = JFU_remember_the_revolution } 
+# 			prerequisite = { focus = JFU_turn_to_will_of_people } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				add_ideas = remember_founding_principles_focus
+# 			} 
+#		}
+#		# communist tree
+#		focus = {
+#			id = JFU_north_sea_guardians
+#			icon = GFX_goal_generic_wolf_pack
+#			ai_will_do = { factor = 1 } 
+# 			x = 15 
+# 			y = 3 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_remember_the_revolution } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				add_ideas = north_sea_guardians_focus
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_raiding_parties
+#			icon = GFX_focus_generic_soviet_politics
+#			ai_will_do = { factor = 1 } 
+# 			x = 15 
+# 			y = 8 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_north_sea_guardians } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				add_ideas = raiding_parties_focus
+# 			} 
+#		}
+#		# international communism spread tree
+#		focus = {
+#			id = JFU_spread_international_socialism
+#			icon = GFX_goal_tripartite_pact
+#			ai_will_do = { factor = 1 } 
+# 			x = 13 
+# 			y = 9 
+# 			mutually_exclusive = { focus = JFU_look_inwards } 
+# 			prerequisite = { focus = JFU_raiding_parties } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				add_ideas = spread_international_socialism
+#				set_rule = { can_create_factions = yes }
+#				create_faction = JFU_workers_union
+#				hidden_effect = {
+#					news_event = { hours = 6 id = news.214 }
+#				}
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_revolution_in_the_benelux
+#			icon = GFX_goal_generic_position_armies
+#			ai_will_do = { factor = 1 } 
+# 			x = 12 
+# 			y = 10 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_spread_international_socialism } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				add_named_threat = { threat = 1 name = JFU_revolution_in_the_benelux }
+#				ENG = {
+#					add_opinion_modifier = { target = JFU modifier = JFU_benelux_intervention_ENG } 
+#				}
+#				BEL = {
+#					add_opinion_modifier = { target = JFU modifier = JFU_benelux_intervention_BEL_HOL_LUX } 
+#				}
+#				HOL = {
+#					add_opinion_modifier = { target = JFU modifier = JFU_benelux_intervention_BEL_HOL_LUX } 
+#				}
+#				LUX = {
+#					add_opinion_modifier = { target = JFU modifier = JFU_benelux_intervention_BEL_HOL_LUX } 
+#				}	
+#				hidden_effect = {
+#					news_event = { hours = 6 id = jfu.1 }
+#				}		 
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_spread_socialism_in_luxembourg
+#			icon = GFX_focus_generic_soviet_politics
+#			ai_will_do = { factor = 1 } 
+# 			x = 12 
+# 			y = 11 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_revolution_in_the_benelux } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				LUX = {
+#						add_ideas = jysk_spreading_socialism
+#						country_event = { id = generic.1 }
+#				}
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_invite_luxembourg
+#			icon = GFX_focus_generic_join_comintern
+#			ai_will_do = { factor = 1 } 
+# 			x = 12 
+# 			y = 12 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_spread_socialism_in_luxembourg } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				LUX = {
+#					 country_event = { id = jfu.2 }
+#				}
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_support_socialist_thinkers_in_belgium
+#			icon = GFX_focus_generic_soviet_politics
+#			ai_will_do = { factor = 1 } 
+# 			x = 10 
+# 			y = 11 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_revolution_in_the_benelux } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				BEL = {
+#						add_ideas = jysk_spreading_socialism
+#						country_event = { id = generic.1 }
+#				}
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_invite_belgium
+#			icon = GFX_focus_generic_join_comintern
+#			ai_will_do = { factor = 1 } 
+# 			x = 10 
+# 			y = 12 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_support_socialist_thinkers_in_belgium } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				BEL = {
+#					 country_event = { id = jfu.2 }
+#				}
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_fund_socialist_circles_in_holland
+#			icon = GFX_focus_generic_soviet_politics
+#			ai_will_do = { factor = 1 } 
+# 			x = 8 
+# 			y = 11 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_revolution_in_the_benelux } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				HOL = {
+#						add_ideas = jysk_spreading_socialism
+#						country_event = { id = generic.1 }
+#				}
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_invite_netherlands
+#			icon = GFX_focus_generic_join_comintern
+#			ai_will_do = { factor = 1 } 
+# 			x = 8 
+# 			y = 12 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_fund_socialist_circles_in_holland } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				HOL = {
+#					 country_event = { id = jfu.2 }
+#				}
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_revolution_in_south_america
+#			icon = GFX_goal_generic_positive_trade_relations
+#			ai_will_do = { factor = 1 } 
+# 			x = 14 
+# 			y = 10 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_spread_international_socialism } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				add_political_power = 25
+#				add_named_threat = { threat = 1 name = JFU_revolution_in_the_benelux }
+#				USA = {
+#					add_opinion_modifier = { target = JFU modifier = JFU_south_america_intervention_USA } 
+#				}
+#				PRU = {
+#					add_opinion_modifier = { target = JFU modifier = JFU_south_america_intervention_PRU_ECU_COL_BRA } 
+#				}
+#				ECU = {
+#					add_opinion_modifier = { target = JFU modifier = JFU_south_america_intervention_PRU_ECU_COL_BRA } 
+#				}
+#				COL = {
+#					add_opinion_modifier = { target = JFU modifier = JFU_south_america_intervention_PRU_ECU_COL_BRA } 
+#				}	
+#				BRA = {
+#					add_opinion_modifier = { target = JFU modifier = JFU_south_america_intervention_PRU_ECU_COL_BRA } 
+#				}
+#				hidden_effect = {
+#					news_event = { hours = 6 id = jfu.6 }
+#				}	 
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_zodiac_expedition
+#			icon = GFX_goal_generic_navy_submarine
+#			ai_will_do = { factor = 1 } 
+# 			x = 14 
+# 			y = 13 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_revolution_in_south_america } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+#				PRU = {
+#					country_event = { id = jfu.10 }
+#				}
+#				ECU = {
+#					country_event = { id = jfu.9 }
+#				}
+#				COL = {
+#					country_event = { id = jfu.8 }
+#				}	
+#				BRA = {
+#					country_event = { id = jfu.7 }
+#				}
+#				custom_effect_tooltip = JFU_zodiac_expedition_tooltip
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_fund_rebels_in_columbia
+#			icon = GFX_focus_generic_soviet_politics
+#			ai_will_do = { factor = 1 } 
+# 			x = 14 
+# 			y = 14 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_zodiac_expedition } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				COL = {
+#						add_ideas = jysk_spreading_socialism
+#						country_event = { id = generic.1 }
+#				}
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_invite_columbia
+#			icon = GFX_focus_generic_join_comintern
+#			ai_will_do = { factor = 1 } 
+# 			x = 14 
+# 			y = 15 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_fund_rebels_in_columbia } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				COL = {
+#					 country_event = { id = jfu.2 }
+#				}
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_socialist_philosophy_in_peru
+#			icon = GFX_focus_generic_soviet_politics
+#			ai_will_do = { factor = 1 } 
+# 			x = 12 
+# 			y = 14 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_zodiac_expedition } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				PRU = {
+#						add_ideas = jysk_spreading_socialism
+#						country_event = { id = generic.1 }
+#				}
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_invite_peru
+#			icon = GFX_focus_generic_join_comintern
+#			ai_will_do = { factor = 1 } 
+# 			x = 12 
+# 			y = 15 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_socialist_philosophy_in_peru } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				PRU = {
+#					 country_event = { id = jfu.2 }
+#				}
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_brazilian_marxism
+#			icon = GFX_focus_generic_soviet_politics
+#			ai_will_do = { factor = 1 } 
+# 			x = 10 
+# 			y = 14 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_zodiac_expedition } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				BRA = {
+#						add_ideas = jysk_spreading_socialism
+#						country_event = { id = generic.1 }
+#				}
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_invite_brazil
+#			icon = GFX_focus_generic_join_comintern
+#			ai_will_do = { factor = 1 } 
+# 			x = 10 
+# 			y = 15 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_brazilian_marxism } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				BRA = {
+#					 country_event = { id = jfu.2 }
+#				}
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_ecuador_goes_red
+#			icon = GFX_focus_generic_soviet_politics
+#			ai_will_do = { factor = 1 } 
+# 			x = 8 
+# 			y = 14 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_zodiac_expedition } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				ECU = {
+#						add_ideas = jysk_spreading_socialism
+#						country_event = { id = generic.1 }
+#				}
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_invite_ecuador
+#			icon = GFX_focus_generic_join_comintern
+#			ai_will_do = { factor = 1 } 
+# 			x = 8 
+# 			y = 15 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_ecuador_goes_red } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				ECU = {
+#					 country_event = { id = jfu.2 }
+#				}
+# 			} 
+#		}
+#		# inward looking communism spread tree
+#		focus = {
+#			id = JFU_look_inwards
+#			icon = GFX_focus_generic_soviet_politics
+#			ai_will_do = { factor = 1 } 
+# 			x = 17 
+# 			y = 9 
+# 			mutually_exclusive = { focus = JFU_spread_international_socialism } 
+# 			prerequisite = { focus = JFU_raiding_parties } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				add_ideas = look_inwards_idea
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_reinforce_the_frontier
+#			icon = GFX_goal_generic_construct_military
+#			ai_will_do = { factor = 1 } 
+# 			x = 16 
+# 			y = 10 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_look_inwards } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				745 = {
+#					if = {
+#						limit = { is_controlled_by = ROOT }
+#						add_building_construction = {
+#							type = bunker
+#							level = 2
+#							province = 13209
+#							instant_build = yes
+#						}
+#						add_building_construction = {
+#							type = bunker
+#							level = 2
+#							province = 13208
+#							instant_build = yes
+#						}
+#						add_building_construction = {
+#							type = bunker
+#							level = 2
+#							province = 11251
+#							instant_build = yes
+#						}
+#					}
+#				}
+#				99 = {
+#					add_building_construction = {
+#							type = bunker
+#							level = 2
+#							province = 3277
+#							instant_build = yes
+#						}
+#				}
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_encourage_fanatical_bands
+#			icon = GFX_focus_generic_soviet_politics
+#			ai_will_do = { factor = 1 } 
+# 			x = 18 
+# 			y = 10 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_look_inwards } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				add_ideas = encourage_fanatical_bands_idea
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_construct_coastal_batteries
+#			icon = GFX_goal_generic_amphibious_assault
+#			ai_will_do = { factor = 1 } 
+# 			x = 16 
+# 			y = 11 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_reinforce_the_frontier } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				745 = {
+#					if = {
+#						limit = { is_controlled_by = ROOT }
+#						add_building_construction = {
+#							type = coastal_bunker
+#							level = 2
+#							province = 13210
+#							instant_build = yes
+#						}
+#				}
+#				99 = {
+#					add_building_construction = {
+#							type = coastal_bunker
+#							level = 2
+#							province = 6364
+#							instant_build = yes
+#						}
+#				}
+#				743 = {
+#					add_building_construction = {
+#							type = coastal_bunker
+#							level = 2
+#							province = 394
+#							instant_build = yes
+#						}
+#				}
+# 			} 
+#		}
+#		}
+#		focus = {
+#			id = JFU_construct_city_trenchlines
+#			icon = GFX_goal_generic_fortify_city
+#			ai_will_do = { factor = 1 } 
+# 			x = 16 
+# 			y = 12 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_construct_coastal_batteries } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				745 = {
+#					if = {
+#						limit = { is_controlled_by = ROOT }
+#						add_building_construction = {
+#							type = bunker
+#							level = 2
+#							province = 13210
+#							instant_build = yes
+#						}
+#				}
+#				99 = {
+#					add_building_construction = {
+#							type = bunker
+#							level = 2
+#							province = 6364
+#							instant_build = yes
+#						}
+#				}
+#				743 = {
+#					add_building_construction = {
+#							type = bunker
+#							level = 2
+#							province = 6235
+#							instant_build = yes
+#						}
+#				}
+# 			} 
+#		}
+#		}
+#		focus = {
+#			id = JFU_redoubt_nordjylland
+#			icon = GFX_goal_generic_fortify_city
+#			ai_will_do = { factor = 1 } 
+# 			x = 16 
+# 			y = 13 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_construct_city_trenchlines } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+#				743 = {
+#					add_building_construction = {
+#							type = bunker
+#							level = 2
+#							province = 6235
+#							instant_build = yes
+#						}
+#					add_building_construction = {
+#							type = bunker
+#							level = 2
+#							province = 3206
+#							instant_build = yes
+#						}
+#					add_building_construction = {
+#							type = bunker
+#							level = 2
+#							province = 13214
+#							instant_build = yes
+#						}
+#					add_building_construction = {
+#							type = industrial_complex 
+#							level = 2
+#							instant_build = yes
+#						}
+#					add_extra_state_shared_building_slots = 2
+#
+#				}
+# 			} 
+#		}
+#		# fascist & neutral tree
+#		focus = {
+#			id = JFU_power_and_politics
+#			icon = GFX_goal_support_fascism
+#			ai_will_do = { factor = 1 } 
+# 			x = 11 
+# 			y = 2 
+# 			mutually_exclusive = { focus = JFU_instate_a_monarchy } 
+# 			prerequisite = { focus = JFU_prioritise_strong_leadership } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				add_ideas = power_and_politics_focus
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_instate_a_monarchy
+#			icon = GFX_goal_tfv_strengthen_commonwealth_ties
+#			ai_will_do = { factor = 1 } 
+# 			x = 9 
+# 			y = 2 
+# 			mutually_exclusive = { focus = JFU_power_and_politics } 
+# 			prerequisite = { focus = JFU_prioritise_strong_leadership } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				add_ideas = instate_a_monarchy_focus
+# 			} 
+#		}
+#		focus = { 
+#		id = JFU_create_a_reserve_system 
+#		icon = GFX_goal_generic_small_arms 
+#		ai_will_do = { factor = 1 } 
+# 		x = 2 
+# 		y = 0 
+# 		mutually_exclusive = { } 
+# 		prerequisite = { } 
+# 		cost = 10  
+# 		available_if_capitulated = yes  
+# 		completion_reward = { 
+# 			army_experience= 25 
+#			add_ideas = create_a_reserve_system_focus
+# 		} 
+# 		}
+#		 #Focus for Induce Competition in the Industries 
+#				focus = { 
+#				id = JFU_induce_competition_in_industries 
+#				icon = GFX_goal_generic_army_artillery2 
+#				ai_will_do = { factor = 1} 
+# 		x =19 
+# 		y =0 
+# 		mutually_exclusive = { } 
+# 		prerequisite = { } 
+# 		cost = 10  
+# 		available_if_capitulated = yes  
+# 		completion_reward = { 
+# 						random_owned_controlled_state = { 
+# 								limit = { 
+# 									free_building_slots = { 
+# 											building = arms_factory 
+# 											size > 0 
+# 											include_locked = yes 
+# 									} 
+# 								} 
+# 								add_extra_state_shared_building_slots = 1 
+# 								add_building_construction = { 
+# 									type = arms_factory 
+# 									level = 1 
+# 									instant_build = yes 
+# 								} 
+# 								set_state_flag = JFU_Focus_MFac1 
+# 						} 
+# 											random_owned_controlled_state = { 
+# 								limit = { 
+# 									free_building_slots = { 
+# 											building = arms_factory 
+# 											size > 0 
+# 											include_locked = yes 
+# 									} 
+# 								} 
+# 								add_extra_state_shared_building_slots = 1 
+# 								add_building_construction = { 
+# 									type = arms_factory 
+# 									level = 1 
+# 									instant_build = yes 
+# 								} 
+# 								set_state_flag = JFU_Focus_MFac1 
+# 						} 
+# 											random_owned_controlled_state = { 
+# 								limit = { 
+# 									free_building_slots = { 
+# 											building = arms_factory 
+# 											size > 0 
+# 											include_locked = yes 
+# 									} 
+# 								} 
+# 								add_extra_state_shared_building_slots = 1 
+# 								add_building_construction = { 
+# 									type = arms_factory 
+# 									level = 1 
+# 									instant_build = yes 
+# 								} 
+# 								set_state_flag = JFU_Focus_MFac1 
+# 						} 
+#					}
+#				}
+#		focus = {
+#			id = JFU_first_great_leap
+#			icon = GFX_focus_generic_socialist_science
+#			ai_will_do = { factor = 1 } 
+# 			x = 19 
+# 			y = 1 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_induce_competition_in_industries } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				random_owned_controlled_state = { 
+# 								limit = { 
+# 									free_building_slots = { 
+# 											building = industrial_complex 
+# 											size > 0 
+# 											include_locked = yes 
+# 									} 
+# 								} 
+# 								add_extra_state_shared_building_slots = 1 
+# 								add_building_construction = { 
+# 									type = industrial_complex 
+# 									level = 1 
+# 									instant_build = yes 
+# 								} 
+# 								set_state_flag = JFU_Focus_greatleap2 
+# 						} 
+# 						random_owned_controlled_state = { 
+# 								limit = { 
+# 									free_building_slots = { 
+# 											building = industrial_complex 
+# 											size > 0 
+# 											include_locked = yes 
+# 									} 
+# 								} 
+# 								add_extra_state_shared_building_slots = 1 
+# 								add_building_construction = { 
+# 									type = industrial_complex 
+# 									level = 1 
+# 									instant_build = yes 
+# 								} 
+# 								set_state_flag = JFU_Focus_greatleap2
+# 						} 
+#					add_resource = {
+#						type = aluminium
+#						amount = 4
+#						state = 745
+#					}
+#					add_resource = {
+#						type = chromium
+#						amount = 4
+#						state = 745
+#					}
+#				}
+# 			} 
+#		focus = {
+#			id = JFU_instate_jyske_air_wing
+#			icon = GFX_goal_generic_air_fighter
+#			ai_will_do = { factor = 1 } 
+# 			x = 20 
+# 			y = 2 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_first_great_leap } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				random_owned_controlled_state = { 
+# 								limit = { 
+# 									free_building_slots = { 
+# 											building = air_base 
+# 											size > 0 
+# 											include_locked = yes 
+# 									} 
+# 								} 
+# 								add_building_construction = { 
+# 									type = air_base 
+# 									level = 2 
+# 									instant_build = yes 
+# 								} 
+# 								set_state_flag = JFU_Focus_air1
+# 						} 
+# 						random_owned_controlled_state = { 
+# 								limit = { 
+# 									free_building_slots = { 
+# 											building = air_base 
+# 											size > 0 
+# 											include_locked = yes 
+# 									} 
+# 								} 
+# 								add_building_construction = { 
+# 									type = air_base 
+# 									level = 2 
+# 									instant_build = yes 
+# 								} 
+# 								set_state_flag = JFU_Focus_air1
+# 						}
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_commend_jyske_navy
+#			icon = GFX_goal_generic_construct_naval_dockyard
+#			ai_will_do = { factor = 1 } 
+# 			x = 18 
+# 			y = 2 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_first_great_leap } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				random_owned_controlled_state = { 
+# 								limit = { 
+# 									free_building_slots = { 
+# 											building = dockyard 
+# 											size > 0 
+# 											include_locked = yes 
+# 									} 
+# 								} 
+# 								add_extra_state_shared_building_slots = 1 
+# 								add_building_construction = { 
+# 									type = dockyard 
+# 									level = 1 
+# 									instant_build = yes 
+# 								} 
+# 								set_state_flag = JFU_Focus_navy1
+# 						} 
+# 						random_owned_controlled_state = { 
+# 								limit = { 
+# 									free_building_slots = { 
+# 											building = dockyard 
+# 											size > 0 
+# 											include_locked = yes 
+# 									} 
+# 								} 
+# 								add_extra_state_shared_building_slots = 1 
+# 								add_building_construction = { 
+# 									type = dockyard 
+# 									level = 1 
+# 									instant_build = yes 
+# 								} 
+# 								set_state_flag = JFU_Focus_navy1
+# 						}
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_fund_science_cities
+#			icon = GFX_focus_generic_self_management
+#			ai_will_do = { factor = 1 } 
+# 			x = 19 
+# 			y = 3 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_first_great_leap } 
+#			prerequisite = { focus = JFU_commend_jyske_navy }
+#			prerequisite = { focus = JFU_instate_jyske_air_wing }
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				add_research_slot = 1
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_second_great_leap
+#			icon = GFX_focus_generic_socialist_science
+#			ai_will_do = { factor = 1 } 
+# 			x = 19 
+# 			y = 5 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_fund_science_cities } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				743 = { 
+# 								add_extra_state_shared_building_slots = 2
+# 								add_building_construction = { 
+# 									type = synthetic_refinery 
+# 									level = 2 
+# 									instant_build = yes 
+# 								} 
+#								 add_building_construction = { 
+# 									type = anti_air_building 
+# 									level = 2 
+# 									instant_build = yes 
+# 								} 
+# 						}
+#				99 = {
+#					add_building_construction = { 
+# 									type = anti_air_building 
+# 									level = 2 
+# 									instant_build = yes 
+# 								} 
+#				}
+#				745 = {
+#					add_building_construction = { 
+# 									type = anti_air_building 
+# 									level = 2 
+# 									instant_build = yes 
+# 								} 
+#				}
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_commandeer_merchant_navy
+#			icon = GFX_goal_generic_construct_naval_dockyard
+#			ai_will_do = { factor = 1 } 
+# 			x = 18 
+# 			y = 6 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_second_great_leap } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+#				hidden_effect = {
+# 					load_oob = "JFU_Navy_Jylland"
+#				}
+#				custom_effect_tooltip = JFU_commandeer_merchant_navy_tooltip
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_found_piloting_schools
+#			icon = GFX_goal_generic_air_production
+#			ai_will_do = { factor = 1 } 
+# 			x = 20 
+# 			y = 6 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_second_great_leap } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				air_experience = 100
+#				random_owned_controlled_state = { 
+# 								limit = { 
+# 									free_building_slots = { 
+# 											building = air_base 
+# 											size > 0 
+# 											include_locked = yes 
+# 									} 
+# 								} 
+# 								add_building_construction = { 
+# 									type = air_base 
+# 									level = 2 
+# 									instant_build = yes 
+# 								} 
+# 								set_state_flag = JFU_Focus_air1
+# 						}
+# 			} 
+#		}
+#		focus = {
+#			id = JFU_create_bunker_network
+#			icon = GFX_goal_generic_construct_military
+#			ai_will_do = { factor = 1 } 
+# 			x = 19 
+# 			y = 7 
+# 			mutually_exclusive = {  } 
+# 			prerequisite = { focus = JFU_second_great_leap } 
+#			prerequisite = { focus = JFU_commandeer_merchant_navy } 
+#			prerequisite = { focus = JFU_found_piloting_schools } 
+# 			cost = 7  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+# 				745 = {
+#					if = {
+#						limit = { is_controlled_by = ROOT }
+#						add_building_construction = {
+#							type = bunker
+#							level = 2
+#							province = 13209
+#							instant_build = yes
+#						}
+#						add_building_construction = {
+#							type = bunker
+#							level = 2
+#							province = 13208
+#							instant_build = yes
+#						}
+#						add_building_construction = {
+#							type = bunker
+#							level = 2
+#							province = 11251
+#							instant_build = yes
+#						}
+#					}
+#				}
+#				99 = {
+#					add_building_construction = {
+#							type = bunker
+#							level = 2
+#							province = 3277
+#							instant_build = yes
+#						}
+#				}
+# 			} 
+#		}
+#			focus = { 
+#				id = JFU_christian_army_commisars
+#				icon = GFX_goal_generic_political_pressure 
+#				ai_will_do = { factor = 1 } 
+# 				x = 2 
+# 				y = 1 
+# 				mutually_exclusive = { } 
+# 				prerequisite = { focus = JFU_create_a_reserve_system } 
+# 				cost = 10  
+# 				available_if_capitulated = yes  
+# 				completion_reward = { 
+# 					army_experience= 25 
+#					add_ideas = christian_army_commisars_focus
+# 				} 
+#			}
+# 			focus = { 
+#				id = JFU_found_antipartisan_brigades
+#				icon = GFX_goal_generic_political_pressure 
+#				ai_will_do = { factor = 1 } 
+# 				x = 1 
+# 				y = 2 
+# 				mutually_exclusive = { } 
+# 				prerequisite = { focus = JFU_christian_army_commisars } 
+# 				cost = 10  
+# 				available_if_capitulated = yes  
+# 				completion_reward = { 
+# 					army_experience= 25 
+#					add_ideas = found_antipartisan_brigades_focus
+# 				} 
+#			}
+#			focus = { 
+#				id = JFU_instigate_july_7_plot
+#				icon = GFX_goal_generic_more_territorial_claimss 
+#				ai_will_do = {
+#					factor = 10	
+#					modifier = {
+#						factor = 0
+#						date < 1939.1.1
+#					}
+#				}	
+#				bypass = {
+#			DEN = { is_in_faction_with = JFU }
+#			}
+#			cancel = {
+#				OR = {
+#					NOT = { country_exists = DEN }
+#					has_war_with = DEN
+#				}
+#			}
+# 			x = 3 
+# 			y = 2 
+# 			mutually_exclusive = { } 
+# 			prerequisite = { focus = JFU_christian_army_commisars } 
+# 			cost = 10  
+# 			available_if_capitulated = yes  
+# 			completion_reward = { 
+#				DEN = {
+#					add_opinion_modifier = { target = JFU modifier = DEN_july_7_incident }
+#				}
+#				add_opinion_modifier = { target = DEN modifier = JFU_july_7_incident  }
+# 				army_experience= 25 
+#				add_tech_bonus = {
+#					name = tp_bonus
+#					bonus = 0.5
+#					ahead_reduction = 1
+#					uses = 1
+#					technology = transport
+#					technology = landing_craft
+#					technology = tank_landing_craft
+#				}
+#				
+# 			} 
+#			
+	focus = {
+		id = focus_id_1
+		icon = GFX_icon_1
+		ai_will_do = { factor = 1 }
+		x = 4
+		y = 5
+		mutually_exclusive = { focus =  }
+	\prerequisite = { focus =  }
+		cost = 10
+		available_if_capitulated = yes
+		completion_reward = { 
+			add_political_power = 1
+		}
+	}
+#	}

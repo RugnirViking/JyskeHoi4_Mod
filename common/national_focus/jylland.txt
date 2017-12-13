@@ -124,7 +124,12 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				add_ideas = spread_international_socialism
+				set_rule = { can_create_factions = yes }
+				create_faction = JFU_workers_union
+				hidden_effect = {
+					news_event = { hours = 6 id = news.214 }
+				}
  			} 
 		}
 		focus = {
@@ -138,7 +143,22 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				add_named_threat = { threat = 1 name = JFU_revolution_in_the_benelux }
+				ENG = {
+					add_opinion_modifier = { target = JFU modifier = JFU_benelux_intervention_ENG } 
+				}
+				BEL = {
+					add_opinion_modifier = { target = JFU modifier = JFU_benelux_intervention_BEL_HOL_LUX } 
+				}
+				HOL = {
+					add_opinion_modifier = { target = JFU modifier = JFU_benelux_intervention_BEL_HOL_LUX } 
+				}
+				LUX = {
+					add_opinion_modifier = { target = JFU modifier = JFU_benelux_intervention_BEL_HOL_LUX } 
+				}	
+				hidden_effect = {
+					news_event = { hours = 6 id = jfu.1 }
+				}		 
  			} 
 		}
 		focus = {
@@ -152,7 +172,10 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				LUX = {
+						add_ideas = jysk_spreading_socialism
+						country_event = { id = generic.1 }
+				}
  			} 
 		}
 		focus = {
@@ -166,7 +189,9 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				LUX = {
+					 country_event = { id = jfu.2 }
+				}
  			} 
 		}
 		focus = {
@@ -180,7 +205,10 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				BEL = {
+						add_ideas = jysk_spreading_socialism
+						country_event = { id = generic.1 }
+				}
  			} 
 		}
 		focus = {
@@ -194,7 +222,9 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				BEL = {
+					 country_event = { id = jfu.2 }
+				}
  			} 
 		}
 		focus = {
@@ -208,7 +238,10 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				HOL = {
+						add_ideas = jysk_spreading_socialism
+						country_event = { id = generic.1 }
+				}
  			} 
 		}
 		focus = {
@@ -222,7 +255,9 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				HOL = {
+					 country_event = { id = jfu.2 }
+				}
  			} 
 		}
 		focus = {
@@ -236,7 +271,26 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				add_political_power = 25
+				add_named_threat = { threat = 1 name = JFU_revolution_in_the_benelux }
+				USA = {
+					add_opinion_modifier = { target = JFU modifier = JFU_south_america_intervention_USA } 
+				}
+				PRU = {
+					add_opinion_modifier = { target = JFU modifier = JFU_south_america_intervention_PRU_ECU_COL_BRA } 
+				}
+				ECU = {
+					add_opinion_modifier = { target = JFU modifier = JFU_south_america_intervention_PRU_ECU_COL_BRA } 
+				}
+				COL = {
+					add_opinion_modifier = { target = JFU modifier = JFU_south_america_intervention_PRU_ECU_COL_BRA } 
+				}	
+				BRA = {
+					add_opinion_modifier = { target = JFU modifier = JFU_south_america_intervention_PRU_ECU_COL_BRA } 
+				}
+				hidden_effect = {
+					news_event = { hours = 6 id = jfu.6 }
+				}	 
  			} 
 		}
 		focus = {
@@ -250,7 +304,19 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+				PRU = {
+					country_event = { id = jfu.10 }
+				}
+				ECU = {
+					country_event = { id = jfu.9 }
+				}
+				COL = {
+					country_event = { id = jfu.8 }
+				}	
+				BRA = {
+					country_event = { id = jfu.7 }
+				}
+				custom_effect_tooltip = JFU_zodiac_expedition_tooltip
  			} 
 		}
 		focus = {
@@ -264,7 +330,10 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				COL = {
+						add_ideas = jysk_spreading_socialism
+						country_event = { id = generic.1 }
+				}
  			} 
 		}
 		focus = {
@@ -278,7 +347,9 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				COL = {
+					 country_event = { id = jfu.2 }
+				}
  			} 
 		}
 		focus = {
@@ -292,7 +363,10 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				PRU = {
+						add_ideas = jysk_spreading_socialism
+						country_event = { id = generic.1 }
+				}
  			} 
 		}
 		focus = {
@@ -306,7 +380,9 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				PRU = {
+					 country_event = { id = jfu.2 }
+				}
  			} 
 		}
 		focus = {
@@ -320,7 +396,10 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				BRA = {
+						add_ideas = jysk_spreading_socialism
+						country_event = { id = generic.1 }
+				}
  			} 
 		}
 		focus = {
@@ -334,7 +413,9 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				BRA = {
+					 country_event = { id = jfu.2 }
+				}
  			} 
 		}
 		focus = {
@@ -348,7 +429,10 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				ECU = {
+						add_ideas = jysk_spreading_socialism
+						country_event = { id = generic.1 }
+				}
  			} 
 		}
 		focus = {
@@ -362,7 +446,9 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				ECU = {
+					 country_event = { id = jfu.2 }
+				}
  			} 
 		}
 		# inward looking communism spread tree
@@ -377,7 +463,7 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				add_ideas = look_inwards_idea
  			} 
 		}
 		focus = {
@@ -435,7 +521,7 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				add_political_power = 150 
+ 				add_ideas = encourage_fanatical_bands_idea
  			} 
 		}
 		focus = {
@@ -874,7 +960,9 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				load_oob = "JFU_Navy_Jylland"
+				hidden_effect = {
+ 					load_oob = "JFU_Navy_Jylland"
+				}
 				custom_effect_tooltip = JFU_commandeer_merchant_navy_tooltip
  			} 
 		}

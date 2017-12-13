@@ -717,7 +717,12 @@ opinion_modifiers = {
 	#Yugoslavian focus
 	YUG_sold_planes = { value = 50 months = 36 decay = 1}
 
-	JFU_july_7_incident = {value = -40 }
+	JFU_july_7_incident = {value = -80 }
 	DEN_july_7_incident = {value = -40 }
 
+	JFU_benelux_intervention_ENG = {value = -30}
+	JFU_benelux_intervention_BEL_HOL_LUX = {value = -30}
+
+	JFU_south_america_intervention_USA = {value = -30}
+	JFU_south_america_intervention_PRU_ECU_COL_BRA= {value = -30}
 }	

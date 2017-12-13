@@ -1,0 +1,33 @@
+division_template = {
+	name = "Revolutionary Bridgade"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		anti_tank = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        anti_air = { x = 1 y = 2 }
+	}
+    support = {
+		recon = { x = 0 y = 0 }   	# Rebels from the jungle know the remote areas like the back of their hand
+		field_hospital = { x = 0 y = 1 } 	# Jysk trained combat medics
+        logistics_company = { x = 0 y = 2 }    # Jysk trained gurellia logistics company
+	}
+}
+units = {
+    division = {
+		name = "1st Revolutionary Brigade: Askel Larsen"
+		location = 10980  # Rio
+		division_template = "Revolutionary Bridgade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+    division = {
+		name = "2st Revolutionary Brigade: Vladimir Lenin"
+		location = 10513  # Sao Paolo
+		division_template = "Revolutionary Bridgade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+}

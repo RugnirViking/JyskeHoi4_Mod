@@ -83,10 +83,10 @@ units = {
 
 	}
 	division = {
-		name = "Jydske Dragonregiment"
+		name = "Jyske Dragonregiment"
 		location = 6364  # Aalborg
 		division_template = "Kavaleri Brigade"
-		start_experience_factor = 1.2
+		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 
 	}
