@@ -414,17 +414,112 @@ country_event = {
 			transfer_state = 101
 			transfer_state = 337
 		}
+		100 = {
+			add_core_of = ISN
+		}
+		101 = {
+			add_core_of = ISN
+		}
+		337 = {
+			add_core_of = ISN
+		}
 	}
 	option = { # create three separate states
 		name = jfu.11.b
 		ISI = {
 			transfer_state = 100
 		}
+		100 = {
+			add_core_of = ISI
+		}
 		ISF = {
 			transfer_state = 337
+		}
+		337 = {
+			add_core_of = ISF
 		}
 		ISG = {
 			transfer_state = 101
 		}
+		101 = {
+			add_core_of = ISG
+		}
+	}
+}
+# ultimatum issued: give sjaelland and navy or war
+country_event = {
+	id = jfu.12
+	title = jfu.12.t
+	desc = jfu.12.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+
+	option = {
+		name = jfu.12.a
+		ai_chance = {
+			factor = 90
+		}
+		JFU = {
+			create_wargoal = {
+				type = take_state
+				target = DEN
+				generator = owned_states
+			}
+			country_event = { id = jfu.14 days = 1 }
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 10
+		}
+		name = jfu.12.b
+		JFU = {
+			transfer_state = 101
+			country_event = { id = jfu.13 days = 1 }
+		}
+		load_oob = "JFU_Navy_Jylland"
+	}
+}
+# denmark said yes - gave us navy
+country_event = {
+	id = jfu.13
+	title = jfu.13.t
+	desc = jfu.13.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+
+	option = {
+		name = jfu.13.a
+	}
+}
+# denmark said no - we get wargoal
+country_event = {
+	id = jfu.14
+	title = jfu.14.t
+	desc = jfu.14.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+
+	option = {
+		name = jfu.14.a
+	}
+}
+# norway is asked to provide millitary assistance
+country_event = {
+	id = jfu.14
+	title = jfu.14.t
+	desc = jfu.14.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+
+	option = {
+		name = jfu.14.a
+	}
+	option = {
+		name = jfu.14.b
 	}
 }
