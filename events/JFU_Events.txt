@@ -509,17 +509,17 @@ country_event = {
 }
 # norway is asked to provide millitary assistance
 country_event = {
-	id = jfu.14
-	title = jfu.14.t
-	desc = jfu.14.d
+	id = jfu.15
+	title = jfu.15.t
+	desc = jfu.15.d
 	picture = GFX_report_event_polish_tanks_01
 	
 	is_triggered_only = yes
 
 	option = {
-		name = jfu.14.a
+		name = jfu.15.a
 	}
 	option = {
-		name = jfu.14.b
+		name = jfu.15.b
 	}
 }

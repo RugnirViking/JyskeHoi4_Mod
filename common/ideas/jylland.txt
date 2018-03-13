@@ -586,7 +586,50 @@ ideas = {
 				fascism_drift = 0.15
 			}
 		}
+		fanatics_draft_focus = {
+			
+			
+			allowed = {
+				always = no
+			}
 
+			allowed_civil_war = {
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+	
+			modifier = {
+				conscription = 0.03
+			}
+		}
+		expand_fanatics_focus = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+	
+			modifier = {
+				conscription = 0.03
+			}
+		}
 		instate_a_monarchy_focus = {
 		
 			allowed = {
@@ -754,6 +797,74 @@ ideas = {
 				army_core_defence_factor = 0.15
 			}
 		}
+		state_primacy_idea = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			rule = {
+				can_create_factions = yes
+			}
+	
+			modifier = {
+				local_resources_factor = 0.50
+			}
+		}
+		materials_technology_focus = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			modifier = {
+				local_resources_factor = 0.50
+			}
+		}
+		tireless_spirit_idea = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			rule = {
+				can_create_factions = yes
+			}
+	
+			modifier = {
+				army_speed_factor = 0.10
+				no_supply_grace = 48 # more hours before supply penalty changes
+				out_of_supply_factor = -0.10
+				org_loss_when_moving = -0.25
+			}
+		}
 		spread_international_socialism = {
 			allowed = {
 				always = no
@@ -769,6 +880,96 @@ ideas = {
 			
 			modifier = {
 				send_volunteer_divisions_required = -0.75
+			}
+		}
+		freedom_legion_focus = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+			
+			modifier = {
+				max_dig_in = 10
+				send_volunteer_divisions_required = -0.75
+			}
+		}
+		personality_cult_focus = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+			
+			modifier = {
+				ai_badass_factor = 0.01    # Will receive 1% of the threat from others
+				ai_get_ally_desire_factor = -100
+				political_power_gain = 0.5
+			}
+		}
+		royal_guard_focus = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+			
+			modifier = {
+				conscription = 0.01
+				army_morale_factor = 0.10
+			}
+		}
+		spirit_of_strength_focus = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+			
+			modifier = {
+				defence = 0.1
+			}
+		}
+		millitary_traditions_focus = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+			
+			modifier = {
+				experience_gain_army_factor = 1
+				army_leader_start_level = 1
 			}
 		}
 	}

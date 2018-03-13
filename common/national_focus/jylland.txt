@@ -44,7 +44,7 @@ focus_tree = {
 			id = JFU_prioritise_strong_leadership
 			icon = GFX_goal_generic_political_pressure
 			ai_will_do = { factor = 1 } 
- 			x = 10 
+ 			x = 9 
  			y = 1 
  			mutually_exclusive = { focus = JFU_turn_to_will_of_people } 
  			prerequisite = { focus = JFU_reorganise_revolutionary_government } 
@@ -81,6 +81,91 @@ focus_tree = {
  			available_if_capitulated = yes  
  			completion_reward = { 
  				add_ideas = remember_founding_principles_focus
+ 			} 
+		}
+		focus = {
+			id = JFU_freedom_legion
+			icon = GFX_goal_support_democracy
+			ai_will_do = { factor = 1 } 
+ 			x = 13 
+ 			y = 3 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { focus = JFU_remember_founding_principles } 
+ 			cost = 7  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+ 				set_rule = { can_send_volunteers = yes }
+				add_ideas = freedom_legion_focus
+ 			} 
+		}
+		focus = {
+			id = JFU_bastion_of_industry
+			icon = GFX_goal_generic_construct_civ_factory
+			ai_will_do = { factor = 1 } 
+ 			x = 13 
+ 			y = 5 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { focus = JFU_freedom_legion } 
+ 			cost = 7  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+ 				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 0.5
+					uses = 2
+					category = industry
+				}
+				add_tech_bonus = {
+					name = industrial_bonus
+					ahead_reduction = 1
+					uses = 1
+					category = industry
+				}
+				random_owned_controlled_state = { 
+ 								limit = { 
+ 									free_building_slots = { 
+ 											building = industrial_complex 
+ 											size > 0 
+ 											include_locked = yes 
+ 									} 
+ 								} 
+ 								add_extra_state_shared_building_slots = 1 
+ 								add_building_construction = { 
+ 									type = industrial_complex 
+ 									level = 1 
+ 									instant_build = yes 
+ 								} 
+ 								set_state_flag = JFU_Focus_greatleap2
+ 						}
+ 			} 
+		}
+		focus = {
+			id = JFU_materials_technology
+			icon = GFX_focus_generic_socialist_science
+			ai_will_do = { factor = 1 } 
+ 			x = 14 
+ 			y = 4 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { focus = JFU_freedom_legion } 
+ 			cost = 7  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+ 				add_ideas = materials_technology_focus
+				 add_resource = {
+						type = steel
+						amount = 6
+						state = 743
+					}
+					add_resource = {
+						type = steel
+						amount = 6
+						state = 99
+					}
+					add_resource = {
+						type = steel
+						amount = 6
+						state = 745
+					}
  			} 
 		}
 		# communist tree
@@ -660,10 +745,156 @@ focus_tree = {
  			} 
 		}
 		focus = {
+			id = JFU_sign_assault_order
+			icon = GFX_goal_generic_more_territorial_claims
+			ai_will_do = { factor = 1 } 
+ 			x = 11 
+ 			y = 3 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { focus = JFU_power_and_politics } 
+ 			cost = 10  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+ 				add_ideas = power_and_politics_focus
+ 			} 
+		}
+		focus = {
+			id = JFU_fanatics_draft
+			icon = GFX_goal_rhineland
+			ai_will_do = { factor = 1 } 
+ 			x = 11 
+ 			y = 4 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { focus = JFU_sign_assault_order } 
+ 			cost = 7  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+ 				add_ideas = fanatics_draft_focus
+ 			} 
+		}
+		focus = {
+			id = JFU_state_primacy
+			icon = GFX_goal_generic_demand_territory
+			ai_will_do = { factor = 1 } 
+ 			x = 11 
+ 			y = 5 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { focus = JFU_fanatics_draft } 
+ 			cost = 7  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+ 				add_ideas = state_primacy_idea
+				set_rule = {
+					can_create_factions = yes
+				}
+			}
+		}
+		focus = {
+			id = JFU_millitary_design_bureau
+			icon = GFX_goal_generic_scientific_exchange
+			ai_will_do = { factor = 1 } 
+ 			x = 9 
+ 			y = 6 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { focus = JFU_fanatics_draft } 
+ 			cost = 7  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+ 				add_tech_bonus = {
+					name = electronics_bonus
+					bonus = 0.5
+					uses = 1
+					category = electronics
+				}
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 0.5
+					uses = 1
+					category = industry
+				}	
+				add_tech_bonus = {
+					name = infantry_weapons_bonus
+					bonus = 0.5
+					uses = 1
+					category = infantry_weapons
+					category = artillery
+				}
+			}
+		}
+		focus = {
+			id = JFU_join_axis
+			icon = GFX_goal_generic_national_unity
+			ai_will_do = { factor = 1 } 
+ 			x = 8 
+ 			y = 7 
+ 			mutually_exclusive = { focus = JFU_northern_league } 
+ 			prerequisite = { focus = JFU_millitary_design_bureau } 
+ 			cost = 7  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+ 				GER = {	add_to_faction = JFU }
+			}
+		}
+		focus = {
+			id = JFU_northern_league
+			icon = GFX_goal_generic_army_artillery2
+			ai_will_do = { factor = 1 } 
+ 			x = 10 
+ 			y = 7 
+ 			mutually_exclusive = { focus = JFU_join_axis } 
+ 			prerequisite = { focus = JFU_millitary_design_bureau } 
+ 			cost = 7  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+				create_faction = JFU_northern_union
+				add_to_faction = NOR
+				NOR = {
+					add_ai_strategy = {
+						type = alliance
+						id = "JFU"
+						value = 200
+					}
+				}	
+			}
+		}
+		focus = {
+			id = JFU_expand_fanatics_corps
+			icon = GFX_goal_generic_military_sphere
+			ai_will_do = { factor = 1 } 
+ 			x = 12 
+ 			y = 7 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { focus = JFU_state_primacy } 
+ 			cost = 7  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+ 				add_ideas = expand_fanatics_focus
+				hidden_effect = {
+					set_rule = { can_use_kamikaze_pilots = yes }
+				}
+				custom_effect_tooltip = kamikaze_focus_tooltip
+ 			} 
+		}
+		focus = {
+			id = JFU_tireless_spirit
+			icon = GFX_goal_generic_military_sphere
+			ai_will_do = { factor = 1 } 
+ 			x = 12 
+ 			y = 8 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { focus = JFU_state_primacy } 
+ 			cost = 7  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+				add_ideas = tireless_spirit_idea
+ 				
+ 			} 
+		}
+		focus = {
 			id = JFU_instate_a_monarchy
 			icon = GFX_goal_tfv_strengthen_commonwealth_ties
 			ai_will_do = { factor = 1 } 
- 			x = 9 
+ 			x = 7 
  			y = 2 
  			mutually_exclusive = { focus = JFU_power_and_politics } 
  			prerequisite = { focus = JFU_prioritise_strong_leadership } 
@@ -671,6 +902,63 @@ focus_tree = {
  			available_if_capitulated = yes  
  			completion_reward = { 
  				add_ideas = instate_a_monarchy_focus
+ 			} 
+		}
+		focus = {
+			id = JFU_personality_cult
+			icon = GFX_focus_hun_assassinate_horthy
+			ai_will_do = { factor = 1 } 
+ 			x = 7 
+ 			y = 4 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { focus = JFU_instate_a_monarchy } 
+ 			cost = 7  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+ 				stability_factor = 0.05
+				add_ideas = personality_cult_focus
+ 			} 
+		}
+		focus = {
+			id = JFU_royal_guard
+			icon = GFX_focus_rom_royal_dictatorship
+			ai_will_do = { factor = 1 } 
+ 			x = 9 
+ 			y = 4 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { focus = JFU_instate_a_monarchy } 
+ 			cost = 7  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+ 				add_ideas = royal_guard_focus
+ 			} 
+		}
+		focus = {
+			id = JFU_spirit_of_strength
+			icon = GFX_focus_secret_rearmament
+			ai_will_do = { factor = 1 } 
+ 			x = 7 
+ 			y = 5 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { focus = JFU_personality_cult } 
+ 			cost = 7  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+ 				add_ideas = spirit_of_strength_focus
+ 			} 
+		}
+		focus = {
+			id = JFU_millitary_traditions
+			icon = GFX_focus_generic_home_defense
+			ai_will_do = { factor = 1 } 
+ 			x = 7 
+ 			y = 6 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { focus = JFU_spirit_of_strength } 
+ 			cost = 7  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+ 				add_ideas = millitary_traditions_focus
  			} 
 		}
 		focus = { 

@@ -172,7 +172,7 @@ def readLine(a):
         #print("a: "+str(stack)+" word: "+word+" \n\n")     
     word=""  
     
-with open("common/national_focus/jylland.txt","r") as f:
+with open("common/national_focus/denmark.txt","r") as f:
     a = 0
     for line in f:
         a+=1
