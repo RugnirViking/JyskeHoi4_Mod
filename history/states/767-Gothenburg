@@ -1,0 +1,32 @@
+state= {
+	id=767
+	name="STATE_767"
+	manpower = 2034114
+
+	state_category = city
+    resources={
+		steel=4
+	}
+	history=
+	{
+		owner = SWE
+		victory_points = {
+			383 10
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			dockyard = 1
+			air_base = 1
+            383 = {
+				naval_base = 5
+				coastal_bunker = 5
+			}
+		}
+		add_core_of = SWE
+	}
+
+	provinces= {
+		9251 3307 3386 6406 6331 383 295 6310
+	}
+}

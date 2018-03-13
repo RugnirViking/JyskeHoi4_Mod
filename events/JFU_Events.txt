@@ -334,7 +334,7 @@ country_event = {
 	}
 	option = {
 		name = jfu.7.b
-		add_national_unity = 0.05
+		add_stability = 0.05
 	}
 }
 # zodiac expedition in columbia
@@ -352,7 +352,7 @@ country_event = {
 	}
 	option = {
 		name = jfu.8.b
-		add_national_unity = 0.05
+		add_stability = 0.05
 	}
 }
 # zodiac expedition in ecuador
@@ -370,7 +370,7 @@ country_event = {
 	}
 	option = {
 		name = jfu.9.b
-		add_national_unity = 0.05
+		add_stability = 0.05
 	}
 }
 # zodiac expedition in peru
@@ -388,7 +388,7 @@ country_event = {
 	}
 	option = {
 		name = jfu.10.b
-		add_national_unity = 0.05
+		add_stability = 0.05
 	}
 }
 # create ISFU Northern Union or ISFU Iceland, ISFU Greenland and ISFU Føroyar 
