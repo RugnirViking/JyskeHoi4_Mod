@@ -915,7 +915,7 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
- 				stability_factor = 0.05
+ 				add_stability = 0.05
 				add_ideas = personality_cult_focus
  			} 
 		}

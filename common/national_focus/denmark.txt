@@ -11,6 +11,70 @@ focus_tree = {
 	}
 	
 	default = no
+	#
+	#		Anti-swedish tree
+	#
+	focus = {
+			id = DEN_anti_swedish_rhetoric
+			icon = GFX_focus_generic_self_management
+			ai_will_do = { factor = 1 } 
+ 			x = 4 
+ 			y = 0 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { } 
+ 			cost = 10  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+				add_opinion_modifier = { target = SWE modifier = SWE_anti_swedish_rhetoric } 
+				SWE = {
+					add_opinion_modifier = { target = DEN modifier = DEN_anti_swedish_rhetoric } 
+				}
+				add_political_power = 80 
+ 			} 
+	    }
+	focus = {
+			id = DEN_revise_history_teachings
+			icon = GFX_focus_generic_self_management
+			ai_will_do = { factor = 1 } 
+ 			x = 4 
+ 			y = 1 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { focus = DEN_anti_swedish_rhetoric } 
+ 			cost = 10  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+				add_stability = 0.1
+ 			} 
+	    }
+	focus = {
+			id = DEN_ban_spoken_swedish
+			icon = GFX_focus_generic_self_management
+			ai_will_do = { factor = 1 } 
+ 			x = 4 
+ 			y = 2 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { focus = DEN_revise_history_teachings } 
+ 			cost = 10  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+				add_war_support = 0.15
+ 			} 
+	    }
+	focus = {
+			id = DEN_demand_kalmar_territories
+			icon = GFX_focus_generic_self_management
+			ai_will_do = { factor = 1 } 
+ 			x = 4 
+ 			y = 3 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { focus = DEN_ban_spoken_swedish } 
+ 			cost = 10  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+				country_event = { id = den.1 }
+ 			} 
+	    }
+
     focus = {
 			id = DEN_copenhagen_coastal_battery
 			icon = GFX_focus_generic_self_management
@@ -34,7 +98,7 @@ focus_tree = {
 				}
  			} 
 	    }
-    }
+	}
     focus = {
 			id = DEN_respond_to_agression
 			icon = GFX_focus_generic_self_management
@@ -58,7 +122,7 @@ focus_tree = {
 				}
  			} 
 	    }
-    }
+	}
     focus = {
 			id = DEN_issue_demands
 			icon = GFX_focus_generic_self_management
@@ -83,14 +147,124 @@ focus_tree = {
  			} 
         }
 	}
-    focus = {
-			id = DEN_demand_scania
+	focus = {
+			id = DEN_recover_from_humiliation
 			icon = GFX_focus_generic_self_management
 			ai_will_do = { factor = 1 } 
- 			x = 12 
+ 			x = 8 
+ 			y = 0 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { } 
+ 			cost = 7  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+ 				37 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = coastal_bunker
+							level = 2
+							province = 6287
+							instant_build = yes
+						}
+				}
+ 			} 
+        }
+	}
+	focus = {
+			id = DEN_create_school_of_officers
+			icon = GFX_focus_generic_self_management
+			ai_will_do = { factor = 1 } 
+ 			x = 6 
+ 			y = 1 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { focus = DEN_recover_from_humiliation } 
+ 			cost = 7  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+				create_field_marshal = { name = "Torkild Henriksen" picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds" traits = { Infantry Officer } 
+					skill = 3 
+					attack_skill = 3
+					defense_skill = 4
+					planning_skill = 1
+					logistics_skill = 1 
+				}
+				create_field_marshal = { name = "Marius Svendsen" picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds" traits = { } 
+					skill = 1 
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 2 
+				}
+				create_navy_leader = { name = "Bernt Aagaard" gfx = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds" traits = { } skill = 4 }
+ 				create_corps_commander = { name = "Nicolai Magnussen" picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds" traits = { } 
+					skill = 2 
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 3 
+				}
+				create_corps_commander = { name = "Casper Korsgaard" picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds" traits = { } 
+					skill = 3 
+					attack_skill = 2
+					defense_skill = 4
+					planning_skill = 1
+					logistics_skill = 3 
+				}
+				create_corps_commander = { name = "Hans Davidsen" picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_13.dds" traits = { skilled_staffer  } 
+					skill = 3 
+					attack_skill = 3
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 3 
+				}
+ 			} 
+        }
+	focus = {
+		id = DEN_reinforce_chain_of_command
+		icon = GFX_focus_generic_self_management
+		ai_will_do = { factor = 1 } 
+ 		x = 6 
+ 		y = 2 
+ 		mutually_exclusive = { } 
+ 		prerequisite = { focus = DEN_create_school_of_officers } 
+ 		cost = 7  
+ 		available_if_capitulated = yes  
+ 		completion_reward = { 
+			add_command_power = 50
+ 		} 
+	}
+	focus = {
+			id = DEN_finnish_millitary_cooperation
+			icon = GFX_focus_generic_self_management
+			ai_will_do = { factor = 1 } 
+ 			x = 8 
+ 			y = 1 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { focus = DEN_recover_from_humiliation } 
+ 			cost = 7  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+ 				add_tech_bonus = {
+					bonus = 0.5
+					uses = 2
+					category = land_doctrine
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = air_doctrine
+				}
+ 			} 
+        }
+	focus = {
+			id = DEN_finnish_arms_shipments
+			icon = GFX_focus_generic_self_management
+			ai_will_do = { factor = 1 } 
+ 			x = 8 
  			y = 3 
  			mutually_exclusive = { } 
- 			prerequisite = { focus = DEN_issue_demands } 
+ 			prerequisite = { focus = DEN_finnish_millitary_cooperation } 
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
@@ -107,14 +281,14 @@ focus_tree = {
  			} 
         }
 	}
-    focus = {
-			id = DEN_demand_gotland
+	focus = {
+			id = DEN_finnish_intervention
 			icon = GFX_focus_generic_self_management
 			ai_will_do = { factor = 1 } 
- 			x = 12 
+ 			x = 8 
  			y = 4 
  			mutually_exclusive = { } 
- 			prerequisite = { focus = DEN_demand_scania } 
+ 			prerequisite = { focus = DEN_finnish_arms_shipments } 
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
@@ -131,14 +305,14 @@ focus_tree = {
  			} 
         }
 	}
-    focus = {
-			id = DEN_demand_aland
+	focus = {
+			id = DEN_ensure_finnish_dependance
 			icon = GFX_focus_generic_self_management
 			ai_will_do = { factor = 1 } 
- 			x = 12 
+ 			x = 8 
  			y = 5 
  			mutually_exclusive = { } 
- 			prerequisite = { focus = DEN_demand_gotland } 
+ 			prerequisite = { focus = DEN_finnish_intervention } 
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
@@ -155,4 +329,60 @@ focus_tree = {
  			} 
         }
 	}
+	focus = {
+			id = DEN_expand_state_mineral_programmes
+			icon = GFX_focus_generic_self_management
+			ai_will_do = { factor = 1 } 
+ 			x = 10 
+ 			y = 1 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { focus = DEN_recover_from_humiliation } 
+ 			cost = 7  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+ 				add_ideas = strategic_materials_bill_idea
+ 			} 
+        }
+	focus = {
+			id = DEN_strategic_materials_bill
+			icon = GFX_focus_generic_self_management
+			ai_will_do = { factor = 1 } 
+ 			x = 10 
+ 			y = 2 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { focus = DEN_expand_state_mineral_programmes } 
+ 			cost = 7  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+ 				add_ideas = state_mineral_programmes_idea
+ 			} 
+        }
+	focus = {
+			id = DEN_civillian_reparations_program
+			icon = GFX_focus_generic_self_management
+			ai_will_do = { factor = 1 } 
+ 			x = 10 
+ 			y = 3 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { focus = DEN_strategic_materials_bill } 
+ 			cost = 7  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+ 				add_ideas = civillian_reparations_program_idea
+ 			} 
+        }
+	focus = {
+			id = DEN_millitary_infrastructure_law
+			icon = GFX_focus_generic_self_management
+			ai_will_do = { factor = 1 } 
+ 			x = 10 
+ 			y = 4 
+ 			mutually_exclusive = { } 
+ 			prerequisite = { focus = DEN_civillian_reparations_program } 
+ 			cost = 7  
+ 			available_if_capitulated = yes  
+ 			completion_reward = { 
+ 				add_ideas = millitary_infrastructure_law_idea
+ 			} 
+        }
 }

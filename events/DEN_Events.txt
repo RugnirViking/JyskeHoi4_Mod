@@ -1,0 +1,137 @@
+
+add_namespace = den
+
+country_event = {
+	id = den.1
+	title = den.1.t
+	desc = den.1.d
+	picture = GFX_report_event_polish_tanks_01
+
+	is_triggered_only = yes
+
+	option = { #Demand Kalmar borders
+		name = den.1.a
+		ai_chance = {
+			factor = 50
+		}
+		SWE = {
+			country_event = { id = den.2 days = 1 }
+		}
+	}
+    option = { #Demand just scane
+		name = den.1.b
+		ai_chance = {
+			factor = 30
+		}
+		SWE = {
+			country_event = { id = den.3 days = 1 }
+		}
+	}
+	option = { #Get claims on kalmar borders
+		name = den.1.c
+		ai_chance = {
+			factor = 20
+		}
+		138 = {
+			add_claim_by = DEN
+		}
+		766 = {
+			add_claim_by = DEN
+		}
+		767 = {
+			add_claim_by = DEN
+		}
+	}
+}
+country_event = {
+	id = den.2
+	title = den.2.t
+	desc = den.2.d
+	picture = GFX_report_event_polish_tanks_01
+
+	is_triggered_only = yes
+
+	option = { #agree to demands
+		name = den.2.a
+		ai_chance = {
+			factor = 50
+		}
+        DEN = {
+			transfer_state = 138
+			transfer_state = 767
+			transfer_state = 766
+			country_event = { id = den.5 days = 1 }
+		}
+	}
+
+	option = {
+		name = den.2.b
+		ai_chance = {
+			factor = 50
+		}
+		DEN = {
+            create_wargoal = {
+					type = puppet_wargoal_focus
+					target = SWE
+				}
+			country_event = { id = den.6 days = 1 }
+		}
+	}
+}
+country_event = {
+	id = den.3
+	title = den.3.t
+	desc = den.3.d
+	picture = GFX_report_event_polish_tanks_01
+
+	is_triggered_only = yes
+
+	option = { #agree to demands
+		name = den.3.a
+		ai_chance = {
+			factor = 50
+		}
+        DEN = {
+			transfer_state = 138
+			country_event = { id = den.5 days = 1 }
+		}
+	}
+
+	option = {
+		name = den.3.b
+		ai_chance = {
+			factor = 50
+		}
+		DEN = {
+            create_wargoal = {
+					type = puppet_wargoal_focus
+					target = SWE
+				}
+			country_event = { id = den.6 days = 1 }
+		}
+	}
+}
+country_event = { 
+	id = den.5
+	title = den.5.t
+	desc = den.5.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+
+	option = {
+		name = den.5.a
+	}
+}
+country_event = {
+	id = den.6
+	title = den.6.t
+	desc = den.6.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+
+	option = {
+		name = den.6.a
+	}
+}

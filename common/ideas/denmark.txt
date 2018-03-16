@@ -324,4 +324,100 @@ ideas = {
 
 		}
 	}
+
+	strategic_materials_bill_idea = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			rule = {
+				can_create_factions = yes
+			}
+	
+			modifier = {
+				local_resources_factor = 0.10
+			}
+	}
+	state_mineral_programmes_idea = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			rule = {
+				can_create_factions = yes
+			}
+	
+			modifier = {
+				min_export = -0.05
+			}
+	}
+	civillian_reparations_program_idea = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			rule = {
+				can_create_factions = yes
+			}
+	
+			modifier = {
+				production_speed_anti_air_building_factor = 0.2
+				production_speed_infrastructure_factor = 0.2
+			}
+	}
+	millitary_infrastructure_law_idea = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			rule = {
+				can_create_factions = yes
+			}
+	
+			modifier = {
+				production_speed_anti_air_building_factor = 1
+				production_speed_radar_station_factor = 0.5
+				production_speed_infrastructure_factor = 0.5
+			}
+	}
 }

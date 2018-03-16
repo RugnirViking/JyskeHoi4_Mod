@@ -1,0 +1,24 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+
+	JFU_july_7_incident = {value = -80 }
+	DEN_july_7_incident = {value = -40 }
+
+	JFU_benelux_intervention_ENG = {value = -30}
+	JFU_benelux_intervention_BEL_HOL_LUX = {value = -30}
+
+	JFU_south_america_intervention_USA = {value = -30}
+	JFU_south_america_intervention_PRU_ECU_COL_BRA= {value = -30}
+
+	SWE_anti_swedish_rhetoric = {value = -20 }
+	DEN_anti_swedish_rhetoric = {value = -20 }
+}	
