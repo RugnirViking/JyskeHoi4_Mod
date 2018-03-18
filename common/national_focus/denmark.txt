@@ -182,7 +182,7 @@ focus_tree = {
  			cost = 7  
  			available_if_capitulated = yes  
  			completion_reward = { 
-				create_field_marshal = { name = "Torkild Henriksen" picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds" traits = { Infantry Officer } 
+				create_field_marshal = { name = "Torkild Henriksen" picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds" traits = { infantry_officer } 
 					skill = 3 
 					attack_skill = 3
 					defense_skill = 4

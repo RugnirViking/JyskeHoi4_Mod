@@ -324,7 +324,7 @@ ideas = {
 
 		}
 	}
-
+	hidden_ideas = {
 	strategic_materials_bill_idea = {
 			
 			
@@ -420,4 +420,5 @@ ideas = {
 				production_speed_infrastructure_factor = 0.5
 			}
 	}
+}
 }
